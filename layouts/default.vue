@@ -1,8 +1,21 @@
 <template>
   <div>
+    <Topbar />
     <Nuxt />
+    <TheFooter />
   </div>
 </template>
+
+<script>
+import TheFooter from '../components/TheFooter'
+import Topbar from '../components/Topbar.vue'
+
+export default {
+  name: 'Default',
+
+  components: { TheFooter, Topbar }
+}
+</script>
 
 <style>
 html {

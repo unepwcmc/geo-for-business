@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <div>
+      <Hero />
       <Logo />
       <h1 class="title">
         geo-business
@@ -28,17 +29,18 @@
 </template>
 
 <script>
-export default {}
+import Hero from '../components/Hero'
+
+export default {
+  name: 'Index',
+
+  components: { Hero }
+}
 </script>
 
 <style>
 .container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  
 }
 
 .title {
