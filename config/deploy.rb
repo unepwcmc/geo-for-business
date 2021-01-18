@@ -27,6 +27,16 @@ set :scm_username, "unepwcmc-read"
 #set :rvm_ruby_version, '2.3.1'
 
 
+namespace :deploy do
+  desc 'yarn_generate'
+   task :yarn_generate do
+   on roles(:app), in: :sequence, wait: 5 do
+   execute "cd '#{release_path}'; yarn generate"
+      end
+    end
+end
+
+after 'deploy:publishing', 'deploy:yarn_generate'
 
 set :ssh_options, {
   forward_agent: true,
@@ -57,8 +67,9 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', '
 # Default value for keep_releases is 5
 set :keep_releases, 5
 
-set :passenger_restart_with_touch, false
-
+namespace :deploy do
+  after :publishing, 'service:nginx:reload'
+end
 
 
 
