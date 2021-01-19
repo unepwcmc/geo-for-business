@@ -4,6 +4,19 @@
       logo
       <h1>{{ title }}</h1>
       <p>{{ tagline }}</p>
+      <p>Lorem ipsum</p>
+    </div>
+
+    <div>
+      <p>The live launch</p>
+      <p>Lorem</p>
+      <ul>
+        <li>
+          <span>Date</span>
+        </li>
+      </ul>
+
+      <a href="" >Link to live launch</a>
     </div>
   </header>
 </template>

@@ -2,39 +2,19 @@
   <div class="container">
     <div>
       <Hero />
-      <Logo />
-      <h1 class="title">
-        geo-business
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+      <CardsCommittee />
     </div>
   </div>
 </template>
 
 <script>
+import CardsCommittee from '../components/CardsCommittee.vue'
 import Hero from '../components/Hero'
 
 export default {
   name: 'Index',
 
-  components: { Hero }
+  components: { CardsCommittee, Hero }
 }
 </script>
 
