@@ -50,7 +50,8 @@ export default {
 
 <style lang="scss" scoped>
 footer {
-  background-color: $blue-light;
-  border-bottom: solid 30px $blue;
+  background-image: url('~assets/images/hero.svg');
+  background-size: cover;
+  border-bottom: solid 30px $primary;
 }
 </style>

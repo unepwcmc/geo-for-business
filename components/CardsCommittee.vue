@@ -1,20 +1,25 @@
 <template>
-  <div>
+  <section class="section">
     <h2>{{ title }}</h2>
 
-    <ul>
+    <ul class="cards">
       <li v-for="(card, index) in cards"
         :key="index"
+        class="card"
       >
-        <img src="" alt="">
-        <p>
-          <span>{{ card.name }}</span>
+        <img 
+          v-if="card.image"
+          :src="require(`~/assets/images/profiles/${card.image}`)" 
+          alt=""
+        >
+        <p class="card__text">
+          <span class="card__name">{{ card.name }}</span>
           <span>{{ card.jobTitle }}</span>
-          <span>{{ card.location }}</span>
+          <span class="card__location">{{ card.location }}</span>
         </p>
       </li>
     </ul>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -26,6 +31,7 @@ export default {
       title: 'Advisory Committee for GEO for Business',
       cards: [
         {
+          image: 'maria-mendiluce.png',
           jobTitle: 'CEO, We Mean Business Coalition',
           location: 'Switzerland',
           name: 'María Mendiluce (Co-chair)'
@@ -57,5 +63,51 @@ export default {
 </script>
 
 <style lang="scss">
+.section {
+  @include container;
+  @include spacer-large-bottom;
+  @include spacer-medium-top;
+}
 
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+
+  @include breakpoint($small) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+  }
+
+  @include breakpoint($medium) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.card {
+  background-color: $primary;
+  border-radius: $global-radius;
+  color: white;
+  
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+
+  &__text {
+    padding: 22px 20px;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__name {
+    font-weight: bold;
+
+    display: block;
+  }
+
+  &__location {
+    font-weight: bold;
+    margin-top: auto;
+  }
+}
 </style>

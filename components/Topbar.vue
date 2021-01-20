@@ -30,7 +30,8 @@ export default {
 
 <style lang="scss" scoped>
 .topbar {
-  width: 100%;
+  border-bottom: solid 2px $primary;
+  width: 100%; height: 74px;
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

@@ -1,0 +1,79 @@
+@mixin container {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  
+  @include breakpoint($large) {
+    width: $site-width;
+  }
+}
+
+@mixin button-accent {
+  background-color: $accent;
+  border-radius: $button-radius;
+  color: white;
+  font-size: $button-font-size-desktop;
+  font-size: bold;
+  padding: $button-padding;
+  text-decoration: none;
+}
+
+//--------------------------------------------------
+// media queries
+//--------------------------------------------------
+@mixin breakpoint($breakpoint) {
+  @media screen and (min-width: $breakpoint + 1px) {
+    @content;
+  } 
+}
+
+@mixin breakpoint-down($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  } 
+}
+
+@mixin breakpoint-between($breakpoint_1, $breakpoint_2) {
+  @media screen and (max-width: $breakpoint_2) and (min-width: $breakpoint_1 + 1px) {
+    @content;
+  } 
+}
+
+//--------------------------------------------------
+// component spacers
+//--------------------------------------------------
+@mixin spacer-top($mobile, $tablet, $desktop) {
+  padding-top: $mobile;
+  @include breakpoint($small) { padding-top: $tablet; }
+  @include breakpoint($medium) { padding-top: $desktop; }
+}
+
+@mixin spacer-bottom($mobile, $tablet, $desktop) {
+  padding-bottom: $mobile;
+  @include breakpoint($small) { padding-bottom: $tablet; }
+  @include breakpoint($medium) { padding-bottom: $desktop; }
+}
+
+@mixin spacer-small-top {
+  @include spacer-top($spacer-small-mobile, $spacer-small-tablet, $spacer-small-desktop);
+}
+
+@mixin spacer-small-bottom {
+  @include spacer-bottom($spacer-small-mobile, $spacer-small-tablet, $spacer-small-desktop);
+}
+
+@mixin spacer-medium-top {
+  @include spacer-top($spacer-medium-mobile, $spacer-medium-tablet, $spacer-medium-desktop);
+}
+
+@mixin spacer-medium-bottom {
+  @include spacer-bottom($spacer-medium-mobile, $spacer-medium-tablet, $spacer-medium-desktop);
+}
+
+@mixin spacer-large-top {
+  @include spacer-top($spacer-large-mobile, $spacer-large-tablet, $spacer-large-desktop);
+}
+
+@mixin spacer-large-bottom {
+  @include spacer-bottom($spacer-large-mobile, $spacer-large-tablet, $spacer-large-desktop);
+}

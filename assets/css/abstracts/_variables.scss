@@ -1,4 +1,74 @@
-$blue-light: #D6EBFA;
-$blue: #0C314B;
+//--------------------------------------------------
+// borders
+//--------------------------------------------------
+$global-radius: 4px;
 
-$primary: $blue;
+//--------------------------------------------------
+// borders
+//--------------------------------------------------
+$button-font-size-desktop: 20px;
+$button-radius: $global-radius;
+$button-padding: 20px 40px;
+
+//--------------------------------------------------
+// colours
+//--------------------------------------------------
+$blue-light: #D6EBFA;
+$blue: #1FA0E3;
+$blue-dark: #0C314B;
+
+$green: #1CA035;
+
+$red: #FA3232;
+
+$accent: $green;
+$alert: $red;
+$primary: $blue-dark;
+
+$site-width: 1300px;
+
+//--------------------------------------------------
+// fonts
+//--------------------------------------------------
+$heading-color: $primary;
+
+$h1-mobile: 30px;
+$h1-tablet: 50px;
+$h1-desktop: 50px;
+
+$h2-mobile: 25px;
+$h2-tablet: 35px;
+$h2-desktop: 35px;
+
+//--------------------------------------------------
+// breakpoints
+//--------------------------------------------------
+// must be in px not rem!
+// IF MODIFIED, PLEASE CHECK ELSEWHERE IN PROJECT e.g. in mixin-responsive.js
+$small: 767px; 
+$medium: 1024px;
+$large: 1300px;
+
+//--------------------------------------------------
+// padding
+//--------------------------------------------------
+$gutter-small: 20px;
+$gutter-medium: 25px;
+$gutter-large: 30px;
+
+$spacer-small-mobile: 16px;
+$spacer-small-tablet: 24px;
+$spacer-small-desktop: 36px;
+
+$spacer-medium-mobile: 24px;
+$spacer-medium-tablet: 34px;
+$spacer-medium-desktop: 80px;
+
+$spacer-large-mobile: 30px;
+$spacer-large-tablet: 60px;
+$spacer-large-desktop: 100px;
+
+//--------------------------------------------------
+// dimensions
+//--------------------------------------------------
+$site-width: $large;

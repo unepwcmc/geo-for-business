@@ -1,22 +1,27 @@
 <template>
   <header class="hero">
-    <div>
-      logo
-      <h1>{{ title }}</h1>
-      <p>{{ tagline }}</p>
-      <p>Lorem ipsum</p>
-    </div>
+    <div class="hero__content">
+      <img src="" alt="Logo">
+      <h1 class="h1">
+        {{ title }}
+        <span class="h1--colour">{{ titleColourchange }}</span>
+      </h1>
 
-    <div>
-      <p>The live launch</p>
-      <p>Lorem</p>
-      <ul>
-        <li>
-          <span>Date</span>
-        </li>
-      </ul>
+      <div class="box-wrapper">
+        <div class="box">
+          <h2 class="box__title">The live launch</h2>
+          <p>Lorem</p>
+          <ul>
+            <li>
+              <span>Date</span>
+            </li>
+          </ul>
 
-      <a href="" >Link to live launch</a>
+          <a
+            class="box__link" 
+            href="" >Link to live launch</a>
+        </div>
+      </div>
     </div>
   </header>
 </template>
@@ -27,13 +32,56 @@ export default {
 
   data () {
     return {
-      tagline: 'Adapt to survive',
-      title: 'The newly '
+      title: 'The newly launched GEO for Business Brief 1: ',
+      titleColourchange: 'Adapt to Survive: Business transformation in a time of uncertainty'
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
+.hero {
+  background-image: url('~assets/images/hero.svg');
+  background-size: cover;
+  height: 826px;
+  
+  position: relative;
+  
+  &__content {
+    @include container;
+    padding-top: 80px;
+  }
+}
 
+.h1 {
+  width: 60%;
+
+  &--colour { 
+    color: $blue; 
+    display: block;
+  }
+}
+
+.box {
+  background-color: $primary;
+  color: white;
+  padding: 72px 40px 40px 40px;
+  width: 416px;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  &-wrapper {
+
+  }
+
+  &__link {
+    @include button-accent;
+  }
+
+  &__title {
+    color: white;
+  }
+}
 </style>
