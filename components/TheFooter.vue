@@ -1,19 +1,39 @@
 <template>
-  <footer>
-    <div>
-      <h3>Contact Details</h3>
-      <img src="https://s3.amazonaws.com/wcmc.logo/UN-Environment-+logo+2017.svg" />
-      <img src="https://s3.amazonaws.com/wcmc.logo/UNEP_WCMC_logo.svg" />
-    </div>
-    <div>
-      <h3>Important Links</h3>
-      <ul>
-        <li v-for="link in links"
-          :key="link.title"
+  <footer class="footer">
+    <div class="footer__content">
+      <div>
+        <h2>Contact Details</h2>
+        <span class="footer__text">Email address</span>
+        <a 
+          class="footer__link"
+          href="mailto:unep-science-geoforbusiness@un.org"
+          title="Send an email to UNEP Science GEO for Busines"
         >
-          <a :href="link.url" title="link.title">{{ link.url }}</a>
-        </li>
-      </ul>
+          unep-science-geoforbusiness@un.org
+        </a>
+        <img 
+          class="footer__logo"
+          src="https://s3.amazonaws.com/wcmc.logo/UN-Environment-+logo+2017.svg" />
+        <img 
+          class="footer__logo"
+          src="https://s3.amazonaws.com/wcmc.logo/UNEP_WCMC_logo.svg" />
+      </div>
+      <div class="footer__links">
+        <h2>Important Links</h2>
+        <ul class="ul-unstyled">
+          <li v-for="link in links"
+            :key="link.title"
+          >
+            <a 
+              class="footer__link"
+              :href="link.url" 
+              :title="`Visit: ${link.title}`"
+            >
+              {{ link.title }}
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>  
   </footer>
 </template>
@@ -26,19 +46,19 @@ export default {
     return {
       links: [
         {
-          title: 'About',
+          title: 'GEO for Business',
           url: ''
         },
         {
-          title: '6 Briefs',
+          title: 'UN Environment Programme’s Strategy for Private Sector Engagement',
           url: ''
         },
         {
-          title: 'Advisory Board',
+          title: 'Global Environment Outlook – GEO-6: Healthy Planet, Healthy People',
           url: ''
         },
         {
-          title: 'Contact & Resources',
+          title: 'Global Environment Outlook –GEO-6: Summary for Policymakers',
           url: ''
         }
 
@@ -49,9 +69,44 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-footer {
+.footer {
+  @include spacer-medium-top;
   background-image: url('~assets/images/hero.svg');
   background-size: cover;
   border-bottom: solid 30px $primary;
+  
+  @include breakpoint($medium) {
+    height: 790px;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+
+  &__logo {
+    margin: 24px 0;
+    height: 50px;
+
+    display: block;
+  }
+
+  &__text {
+    font-weight: bold;
+  }
+
+  &__links {
+    @include breakpoint ($small) { 
+      border-left: solid 1px $primary; 
+      padding-left: 60px;
+    }
+    @include breakpoint ($small) { padding-left: 100px; }
+  }
+
+  &__link {
+    margin-bottom: 18px;
+    
+    display: block;
+  }
 }
 </style>
