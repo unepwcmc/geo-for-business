@@ -47,3 +47,10 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+footer {
+  background-color: $blue-light;
+  border-bottom: solid 30px $blue;
+}
+</style>
