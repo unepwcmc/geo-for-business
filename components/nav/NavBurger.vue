@@ -1,20 +1,10 @@
 <template>
   <div class="nav">
-    <div :id="mixinModalId" class="nav__pane" :class="navType">
+    <div :id="mixinModalId" class="nav__pane" :class="isActive">
 
       <button id="close-nav-pane" class="nav__close" v-show="isBurgerNav" @click="closeNavPane"></button>
 
       <NavScrollTo />
-
-      <!-- <ul aria-label="nav" role="menubar" class="nav__ul v-nav-pane-target">
-        <li role="none" class="nav__li" v-for="link in links" :key="link.id">
-          
-          <nav-dropdown v-if="hasChildren(link)" :link="link" />
-
-          <nav-link v-else :link="link" />
-        </li>
-      </ul> -->
-
     </div>
 
     <button :id="mixinTriggerId" class="nav__burger" v-show="isBurgerNav" @click="openNavPane"></button>
@@ -24,7 +14,7 @@
 <script>
 import NavScrollTo from "./NavScrollTo"
 // import NavLink from "./NavLink"
-// import mixinResponsive from "../../mixins/mixin-responsive"
+import mixinResponsive from "../../mixins/mixin-responsive"
 // import mixinPopupCloseListeners from "../../mixins/mixin-popup-close-listeners"
 // import mixinFocusCapture from "../../mixins/mixin-focus-capture"
 // import { disableTabbing, reenableTabbing } from '../../helpers/focus-helpers';
@@ -38,7 +28,7 @@ export default {
   },
 
   mixins: [
-    // mixinResponsive, 
+    mixinResponsive, 
     // mixinPopupCloseListeners({closeCallback: 'closeNavPane', toggleVariable: 'isNavPaneActive'}), 
     // mixinFocusCapture({toggleVariable: 'isNavPaneActive', closeCallback: 'closeNavPane', openCallback: 'openNavPane'})
   ],
@@ -64,7 +54,7 @@ export default {
   },
 
   mounted () {
-    this.areNavPaneItemsVisible ? reenableTabbing(this.navPaneItemContainer) : disableTabbing(this.navPaneItemContainer)
+    // this.areNavPaneItemsVisible ? reenableTabbing(this.navPaneItemContainer) : disableTabbing(this.navPaneItemContainer)
   },
 
   methods: {
@@ -91,9 +81,9 @@ export default {
       return this.isAlwaysBurger || !this.isLarge()
     },
 
-    navType () {
+    isActive () {
       return { 
-        'nav-pane--active': this.isNavPaneActive
+        'active': this.isNavPaneActive
       }
     },
 
@@ -112,13 +102,32 @@ export default {
 
   watch: {
     areNavPaneItemsVisible (visible) {
-      visible ? reenableTabbing(this.navPaneItemContainer) : disableTabbing(this.navPaneItemContainer)
+      // visible ? reenableTabbing(this.navPaneItemContainer) : disableTabbing(this.navPaneItemContainer)
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
+.nav__pane {
+  background-color: white;
+  width: 100%; height: 100%;
 
-  
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  @include breakpoint($medium) {
+    width: auto; height: auto;
+    
+    display: block;
+    position: static;
+  }
+
+  &.active { 
+    display: block;
+  }
+}
 </style>

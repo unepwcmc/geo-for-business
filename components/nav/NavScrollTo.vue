@@ -53,9 +53,8 @@ export default {
 
   methods: {
     onClick (id) {
-      console.log('click')
       const sectionId = `#${id}`
-      console.log(sectionId)
+      
       gsap.to(this.window, {
         duration: 1,
         scrollTo: sectionId
@@ -78,8 +77,11 @@ export default {
 .link {
   cursor: pointer;
   font-weight: bold;
+  padding: 10px 0;
   margin: 0 14px; 
 
-  display: inline;
+  @include breakpoint($medium) {
+    display: inline;
+  }
 }
 </style>

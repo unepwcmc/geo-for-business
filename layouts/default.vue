@@ -13,7 +13,19 @@ import Topbar from '../components/Topbar.vue'
 export default {
   name: 'Default',
 
-  components: { TheFooter, Topbar }
+  components: { TheFooter, Topbar },
+
+  head () {
+    return {
+      meta: [
+        {
+          hid: 'viewport',
+          name: 'viewport',
+          content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0'
+        }
+      ]
+    }
+  }
 }
 </script>
 
