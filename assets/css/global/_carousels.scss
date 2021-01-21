@@ -1,0 +1,25 @@
+.carousel .flickity-prev-next-button {
+  background-color: $primary;
+  top: 0;
+  transform: translateY(-150%);
+
+  &:hover { background-color: lighten($primary, 10%);}
+
+  &.next {
+    right: 0;
+  }
+
+  &.previous {
+    right: 0;
+    left: unset;
+    transform: translate(-110%, -150%);
+  }
+
+  .flickity-button-icon { 
+    fill: white;
+    width: 40%; height: 40%;
+
+    top: 30%;
+    left: 30%;
+   }
+}

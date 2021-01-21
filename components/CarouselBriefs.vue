@@ -4,6 +4,7 @@
       <h2>{{ title }}</h2>
 
       <flickity
+        class="carousel"
         :options="carouselOptions"
       >
         <div v-for="(slide, index) in carouselSlides"
