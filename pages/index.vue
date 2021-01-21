@@ -3,6 +3,7 @@
     <div>
       <Hero />
       <CarouselBriefs />
+      <CarouselMessages />
       <CardsCommittee />
     </div>
   </div>
@@ -10,6 +11,7 @@
 
 <script>
 import CarouselBriefs from '../components/CarouselBriefs.vue'
+import CarouselMessages from '../components/CarouselMessages.vue'
 import CardsCommittee from '../components/CardsCommittee.vue'
 import Hero from '../components/Hero'
 
@@ -18,6 +20,7 @@ export default {
 
   components: { 
     CarouselBriefs, 
+    CarouselMessages,
     CardsCommittee, 
     Hero 
   }
