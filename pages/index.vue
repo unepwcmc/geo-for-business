@@ -2,6 +2,7 @@
   <div class="container">
     <div>
       <Hero />
+      <ContentBrief />
       <ContentAbout />
       <CarouselBriefs />
       <CarouselMessages />
@@ -11,20 +12,22 @@
 </template>
 
 <script>
-import ContentAbout from '../components/ContentAbout.vue'
+import CardsCommittee from '../components/CardsCommittee.vue'
 import CarouselBriefs from '../components/CarouselBriefs.vue'
 import CarouselMessages from '../components/CarouselMessages.vue'
-import CardsCommittee from '../components/CardsCommittee.vue'
+import ContentAbout from '../components/ContentAbout.vue'
+import ContentBrief from '../components/ContentBrief.vue'
 import Hero from '../components/Hero'
 
 export default {
   name: 'Index',
 
   components: { 
-    ContentAbout,
+    CardsCommittee, 
     CarouselBriefs, 
     CarouselMessages,
-    CardsCommittee, 
+    ContentAbout,
+    ContentBrief,
     Hero 
   }
 }

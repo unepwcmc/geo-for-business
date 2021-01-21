@@ -65,6 +65,8 @@ export default {
 
 <style lang="scss" scoped>
 .section {
+  @include spacer-medium-top;
+  @include spacer-medium-bottom;
   background-color: $blue-light;
 
   &__content {

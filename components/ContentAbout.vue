@@ -1,5 +1,8 @@
 <template>
-  <section class="section">
+  <section 
+    id="about" 
+    class="section"
+  >
     <div class="section__content">
       <div>
         <h2>{{ title }}</h2>
@@ -35,6 +38,8 @@ export default {
 
 <style lang="scss" scoped>
 .section {
+  @include spacer-medium-top;
+  @include spacer-medium-bottom;
   background-color: $blue-light;
 
   &__content {

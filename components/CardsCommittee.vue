@@ -1,5 +1,8 @@
 <template>
-  <section class="section">
+  <section 
+    id="advisory-committee"
+    class="section"
+  >
     <h2>{{ title }}</h2>
 
     <ul class="cards">

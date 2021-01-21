@@ -19,12 +19,12 @@
 </template>
 
 <script>
-import NavScrollTo from '../components/NavScrollTo'
+import NavBurger from '../components/nav/NavBurger'
 
 export default {
   name: 'TopBar',
   
-  components: { NavScrollTo }
+  components: { NavBurger }
 }
 </script>
 
@@ -33,7 +33,8 @@ export default {
   border-bottom: solid 2px $primary;
   width: 100%; height: 74px;
 
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
 }
 </style>
