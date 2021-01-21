@@ -44,7 +44,7 @@ export default {
         },
         {
           text: 'Addressing resource efficiency, waste and supply chains in a cross-cutting brief which explores circular economy as a means to achieve the SDGs, and the implications for business. This report links to the analysis from the Ellen McArthur Foundation.',
-          title: 'Moving from linear to circular economies and what this means for business:',
+          title: 'Business transformation is critical and possible',
           
         },
         {
