@@ -8,14 +8,22 @@
   }
 }
 
-@mixin button-accent {
+@mixin button-accent($size: 'default') {
   background-color: $accent;
   border-radius: $button-radius;
   color: white;
   font-size: $button-font-size-desktop;
-  font-size: bold;
+  font-weight: bold;
   padding: $button-padding;
+  text-align: center;
   text-decoration: none;
+
+  display: block;
+
+  @if($size == 'large') {
+    font-size: $button-font-size-large-desktop;
+    padding: $button-padding-large;
+  }
 }
 
 

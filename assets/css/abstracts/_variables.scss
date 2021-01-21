@@ -6,18 +6,22 @@ $global-radius: 4px;
 //--------------------------------------------------
 // borders
 //--------------------------------------------------
-$button-font-size-desktop: 20px;
+$button-font-size-desktop: 16px;
+$button-font-size-large-desktop: 20px;
 $button-radius: $global-radius;
-$button-padding: 20px 40px;
+$button-padding: 10px 20px;
+$button-padding-large: 20px 40px;
 
 //--------------------------------------------------
-// colours
+// colors
 //--------------------------------------------------
 $blue-light: #D6EBFA;
 $blue: #1FA0E3;
 $blue-dark: #0C314B;
 
 $green: #1CA035;
+
+$orange: #CE6A46;
 
 $red: #FA3232;
 
@@ -30,7 +34,14 @@ $site-width: 1300px;
 //--------------------------------------------------
 // fonts
 //--------------------------------------------------
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+$roboto: 'Roboto', sans-serif;
+
+$body-color: $primary;
+$body-font: $roboto;
+
 $heading-color: $primary;
+$heading-font: $roboto;
 
 $h1-mobile: 30px;
 $h1-tablet: 50px;
@@ -40,10 +51,14 @@ $h2-mobile: 25px;
 $h2-tablet: 35px;
 $h2-desktop: 35px;
 
+$h3-mobile: 20px;
+$h3-tablet: 25px;
+$h3-desktop: 25px;
+
 //--------------------------------------------------
 // links
 //--------------------------------------------------
-$a-colour: $blue;
+$a-color: $blue;
 $a-underline: underline; 
 
 //--------------------------------------------------

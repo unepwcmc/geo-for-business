@@ -2,19 +2,25 @@
   <div class="container">
     <div>
       <Hero />
+      <CarouselBriefs />
       <CardsCommittee />
     </div>
   </div>
 </template>
 
 <script>
+import CarouselBriefs from '../components/CarouselBriefs.vue'
 import CardsCommittee from '../components/CardsCommittee.vue'
 import Hero from '../components/Hero'
 
 export default {
   name: 'Index',
 
-  components: { CardsCommittee, Hero }
+  components: { 
+    CarouselBriefs, 
+    CardsCommittee, 
+    Hero 
+  }
 }
 </script>
 

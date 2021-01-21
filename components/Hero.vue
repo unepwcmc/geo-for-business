@@ -4,7 +4,7 @@
       <img src="" alt="Logo">
       <h1 class="h1">
         {{ title }}
-        <span class="h1--colour">{{ titleColourchange }}</span>
+        <span class="h1--color">{{ titlecolorchange }}</span>
       </h1>
 
       <div class="box-wrapper">
@@ -33,7 +33,7 @@ export default {
   data () {
     return {
       title: 'The newly launched GEO for Business Brief 1: ',
-      titleColourchange: 'Adapt to Survive: Business transformation in a time of uncertainty'
+      titlecolorchange: 'Adapt to Survive: Business transformation in a time of uncertainty'
     }
   }
 }
@@ -56,7 +56,7 @@ export default {
 .h1 {
   width: 60%;
 
-  &--colour { 
+  &--color { 
     color: $blue; 
     display: block;
   }
@@ -77,7 +77,7 @@ export default {
   }
 
   &__link {
-    @include button-accent;
+    @include button-accent('large');
   }
 
   &__title {

@@ -12,7 +12,8 @@
     "core-js": "^3.6.5",
     "nuxt": "^2.14.6",
     "sass": "^1.32.4",
-    "sass-loader": "^10.1.1"
+    "sass-loader": "^10.1.1",
+    "vue-flickity": "^1.2.1"
   },
   "devDependencies": {
     "@nuxtjs/style-resources": "^1.0.0",
