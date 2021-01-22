@@ -71,6 +71,7 @@ export default {
 }
 
 .cards {
+  @include ul-unstyled;
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 20px;
@@ -91,7 +92,7 @@ export default {
   color: white;
   
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 139px 1fr;
 
   &__text {
     padding: 22px 20px;
