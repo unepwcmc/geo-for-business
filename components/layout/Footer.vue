@@ -20,12 +20,12 @@
       </div>
       <div class="footer__links">
         <h2>Important Links</h2>
-        <ul class="ul-unstyled">
+        <ul class="footer__ul">
           <li v-for="link in links"
             :key="link.title"
           >
             <a 
-              class="footer__link"
+              class="footer__link-external"
               :href="link.url" 
               :title="`Visit: ${link.title}`"
             >
@@ -40,8 +40,6 @@
 
 <script>
 export default {
-  name: 'TheFooter',
-
   data () {
     return {
       links: [
@@ -72,16 +70,22 @@ export default {
 .footer {
   @include spacer-medium-top;
   background-image: url('~assets/images/hero.svg');
+  background-position: center bottom;
   background-size: cover;
   border-bottom: solid 30px $primary;
+  padding-bottom: 220px;
   
-  @include breakpoint($medium) {
-    height: 790px;
+  @include breakpoint($small) {
+    padding-bottom: 375px;
   }
 
   &__content {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
+    @include container;
+    
+    @include breakpoint($small) {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+    }
   }
 
   &__logo {
@@ -100,13 +104,24 @@ export default {
       border-left: solid 1px $primary; 
       padding-left: 60px;
     }
-    @include breakpoint ($small) { padding-left: 100px; }
+    
+    @include breakpoint ($small) { padding-left: 40px; }
+    @include breakpoint ($medium) { padding-left: 100px; }
+  }
+
+  &__ul {
+    @include ul-unstyled;
   }
 
   &__link {
-    margin-bottom: 18px;
-    
     display: block;
+
+    &-external {
+      @include button-link-external;
+      margin-bottom: 18px;
+    
+      display: block;
+    }
   }
 }
 </style>

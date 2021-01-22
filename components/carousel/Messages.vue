@@ -3,7 +3,7 @@
     <div class="section__content">
       <h2>{{ title }}</h2>
 
-      <flickity
+      <Flickity
         class="carousel"
         :options="carouselOptions"
       >
@@ -17,19 +17,13 @@
             <span class="slide__text">{{ slide.text }}</span>
           </div>
         </div>
-      </flickity>
+      </Flickity>
     </div>
   </section>
 </template>
 
 <script>
-import Flickity from 'vue-flickity'
-
 export default {
-  name: 'CarouselMessages',
-
-  components: { Flickity },
-
   data () {
     return {
       title: 'Key Messages',
@@ -74,7 +68,8 @@ export default {
   }
 }
 
-.carousel-cell {
+::v-deep .flickity-prev-next-button {
+  @include flickity-buttons;
 }
 
 .slide {

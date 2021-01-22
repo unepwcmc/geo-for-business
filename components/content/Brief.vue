@@ -22,8 +22,6 @@
 
 <script> 
 export default {
-  name: 'ContentBrief',
-
   data () {
     return {
       link: {

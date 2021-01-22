@@ -1,0 +1,28 @@
+@mixin button-accent($size: 'default') {
+  background-color: $accent;
+  border-radius: $button-radius;
+  color: white;
+  font-size: $button-font-size-desktop;
+  font-weight: bold;
+  padding: $button-padding;
+  text-align: center;
+  text-decoration: none;
+
+  display: block;
+
+  @if($size == 'large') {
+    font-size: $button-font-size-large-desktop;
+    padding: $button-padding-large;
+  }
+}
+
+@mixin button-link-external {
+  &::after {
+    background-image: url('~assets/images/icons/external.svg');
+    content: '';
+    margin-left: 10px;
+    width: 14px; height: 14px;
+
+    display: inline-block;
+  }
+}

@@ -18,16 +18,6 @@
   </div>
 </template>
 
-<script>
-import NavBurger from '../components/nav/NavBurger'
-
-export default {
-  name: 'TopBar',
-  
-  components: { NavBurger }
-}
-</script>
-
 <style lang="scss" scoped>
 .topbar {
   border-bottom: solid 2px $primary;

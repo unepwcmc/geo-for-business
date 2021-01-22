@@ -1,10 +1,19 @@
 //--------------------------------------------------
+// breakpoints
+//--------------------------------------------------
+// must be in px not rem!
+// IF MODIFIED, PLEASE CHECK ELSEWHERE IN PROJECT e.g. in mixin-responsive.js
+$small: 767px; 
+$medium: 1024px;
+$large: 1300px;
+
+//--------------------------------------------------
 // borders
 //--------------------------------------------------
 $global-radius: 4px;
 
 //--------------------------------------------------
-// borders
+// buttons
 //--------------------------------------------------
 $button-font-size-desktop: 16px;
 $button-font-size-large-desktop: 20px;
@@ -28,6 +37,11 @@ $red: #FA3232;
 $accent: $green;
 $alert: $red;
 $primary: $blue-dark;
+
+//--------------------------------------------------
+// dimensions
+//--------------------------------------------------
+$site-width: $large;
 
 //--------------------------------------------------
 // fonts
@@ -60,15 +74,6 @@ $a-color: $blue;
 $a-underline: underline; 
 
 //--------------------------------------------------
-// breakpoints
-//--------------------------------------------------
-// must be in px not rem!
-// IF MODIFIED, PLEASE CHECK ELSEWHERE IN PROJECT e.g. in mixin-responsive.js
-$small: 767px; 
-$medium: 1024px;
-$large: 1300px;
-
-//--------------------------------------------------
 // padding
 //--------------------------------------------------
 $gutter-small: 20px;
@@ -86,8 +91,3 @@ $spacer-medium-desktop: 80px;
 $spacer-large-mobile: 30px;
 $spacer-large-tablet: 60px;
 $spacer-large-desktop: 100px;
-
-//--------------------------------------------------
-// dimensions
-//--------------------------------------------------
-$site-width: $large;

@@ -12,37 +12,17 @@
 </template>
 
 <script>
-import NavScrollTo from "./NavScrollTo"
-// import NavLink from "./NavLink"
-import mixinResponsive from "../../mixins/mixin-responsive"
+import mixinResponsive from "~/mixins/mixin-responsive"
 // import mixinPopupCloseListeners from "../../mixins/mixin-popup-close-listeners"
 // import mixinFocusCapture from "../../mixins/mixin-focus-capture"
 // import { disableTabbing, reenableTabbing } from '../../helpers/focus-helpers';
 
 export default {
-  name: 'NavBurger',
-
-  components: {
-    NavScrollTo
-    // NavDropdown, NavLink
-  },
-
   mixins: [
     mixinResponsive, 
     // mixinPopupCloseListeners({closeCallback: 'closeNavPane', toggleVariable: 'isNavPaneActive'}), 
     // mixinFocusCapture({toggleVariable: 'isNavPaneActive', closeCallback: 'closeNavPane', openCallback: 'openNavPane'})
   ],
-
-  props: {
-    links: { //[ { id: String, label: String, url: String } ]
-      required: true,
-      type: Array
-    },
-    isAlwaysBurger: {
-      default: false,
-      type: Boolean
-    }
-  },
 
   data () {
     return {

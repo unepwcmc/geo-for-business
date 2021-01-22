@@ -20,8 +20,6 @@
 
 <script> 
 export default {
-  name: 'ContentAbout',
-
   data () {
     return {
       link: {

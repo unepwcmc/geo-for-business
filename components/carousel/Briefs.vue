@@ -34,13 +34,7 @@
 </template>
 
 <script>
-import Flickity from 'vue-flickity'
-
 export default {
-  name: 'CarouselBriefs',
-
-  components: { Flickity },
-
   data () {
     return {
       title: 'GEO for Business Briefs: Agenda for 2021',
@@ -95,6 +89,10 @@ export default {
   &__content {
     @include container;
   }
+}
+
+::v-deep .flickity-prev-next-button {
+  @include flickity-buttons;
 }
 
 .carousel-cell {

@@ -1,33 +1,10 @@
 <template>
   <div>
-    <Topbar />
+    <LayoutTopbar />
     <Nuxt />
-    <TheFooter />
+    <LayoutFooter />
   </div>
 </template>
-
-<script>
-import TheFooter from '../components/TheFooter'
-import Topbar from '../components/Topbar.vue'
-
-export default {
-  name: 'Default',
-
-  components: { TheFooter, Topbar },
-
-  head () {
-    return {
-      meta: [
-        {
-          hid: 'viewport',
-          name: 'viewport',
-          content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0'
-        }
-      ]
-    }
-  }
-}
-</script>
 
 <style>
 html {

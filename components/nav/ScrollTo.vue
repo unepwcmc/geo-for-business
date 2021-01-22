@@ -15,14 +15,7 @@
 </template>
 
 <script>
-import { ScrollToPlugin } from "gsap/ScrollToPlugin"
-import { gsap } from "gsap"
-
-gsap.registerPlugin(ScrollToPlugin)
-
 export default {
-  name: 'Nav',
-
   data () {
     return {
       nav: [
@@ -55,7 +48,7 @@ export default {
     onClick (id) {
       const sectionId = `#${id}`
       
-      gsap.to(this.window, {
+      this.$gsap.to(this.window, {
         duration: 1,
         scrollTo: sectionId
       })

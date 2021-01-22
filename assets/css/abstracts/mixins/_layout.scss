@@ -1,4 +1,16 @@
+@mixin gutters($sides:'both', $type:'padding') {
+  $sides: if($sides == 'both', ('left', 'right'), ($sides));
+
+  @each $s in $sides {
+    #{$type}-#{$s}: $gutter-small;
+
+    @include breakpoint($medium) { #{$type}-#{$s}: $gutter-medium; }
+    @include breakpoint($large) { #{$type}-#{$s}: $gutter-large; }
+  }
+}
+
 @mixin container {
+  @include gutters;
   margin-right: auto;
   margin-left: auto;
   width: 100%;
@@ -8,59 +20,6 @@
   }
 }
 
-@mixin button-accent($size: 'default') {
-  background-color: $accent;
-  border-radius: $button-radius;
-  color: white;
-  font-size: $button-font-size-desktop;
-  font-weight: bold;
-  padding: $button-padding;
-  text-align: center;
-  text-decoration: none;
-
-  display: block;
-
-  @if($size == 'large') {
-    font-size: $button-font-size-large-desktop;
-    padding: $button-padding-large;
-  }
-}
-
-//--------------------------------------------------
-// list
-//--------------------------------------------------
-@mixin ul-unstyled {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.ul-unstyled { @include ul-unstyled; }
-
-//--------------------------------------------------
-// media queries
-//--------------------------------------------------
-@mixin breakpoint($breakpoint) {
-  @media screen and (min-width: $breakpoint + 1px) {
-    @content;
-  } 
-}
-
-@mixin breakpoint-down($breakpoint) {
-  @media screen and (max-width: $breakpoint) {
-    @content;
-  } 
-}
-
-@mixin breakpoint-between($breakpoint_1, $breakpoint_2) {
-  @media screen and (max-width: $breakpoint_2) and (min-width: $breakpoint_1 + 1px) {
-    @content;
-  } 
-}
-
-//--------------------------------------------------
-// component spacers
-//--------------------------------------------------
 @mixin spacer-top($mobile, $tablet, $desktop) {
   padding-top: $mobile;
   @include breakpoint($small) { padding-top: $tablet; }

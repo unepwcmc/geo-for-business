@@ -28,8 +28,6 @@
 
 <script>
 export default {
-  name: 'Hero',
-
   data () {
     return {
       title: 'The newly launched GEO for Business Brief 1: ',

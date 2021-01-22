@@ -27,8 +27,6 @@
 
 <script>
 export default {
-  name: 'CardsCommittee',
-
   data () {
     return {
       title: 'Advisory Committee for GEO for Business',

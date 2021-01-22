@@ -19,10 +19,19 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
+    { src: '~/plugins/gsap.js', mode: 'client' },
+    { src: '~/plugins/vue-flickity.js', mode: 'client' }
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
-  components: true,
+  components: [
+    { path: '~/components/cards/', prefix: 'cards' },
+    { path: '~/components/carousel/', prefix: 'carousel' },
+    { path: '~/components/content/', prefix: 'content' },
+    { path: '~/components/layout/', prefix: 'layout' },
+    { path: '~/components/nav/', prefix: 'nav' },
+    { path: '~/components/page/', prefix: 'page' },
+  ],
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [

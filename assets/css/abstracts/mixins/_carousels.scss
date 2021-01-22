@@ -1,4 +1,4 @@
-.carousel .flickity-prev-next-button {
+@mixin flickity-buttons {
   background-color: $primary;
   top: 0;
   transform: translateY(-150%);
