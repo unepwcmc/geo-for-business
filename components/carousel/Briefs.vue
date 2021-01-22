@@ -96,6 +96,8 @@ export default {
 }
 
 .carousel-cell {
+  width: 100%; 
+  
   @include breakpoint($small) {
     width: 50%;
   }

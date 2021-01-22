@@ -28,7 +28,7 @@ export default {
     return {
       title: 'Key Messages',
       carouselOptions: {
-        cellAlign: 'left',
+        cellAlign: 'center',
         pageDots: false
       },
       carouselSlides: [
@@ -72,12 +72,22 @@ export default {
   @include flickity-buttons;
 }
 
+.carousel-cell {
+  margin-right: 10px;
+  width: 100%; 
+  // height: 100%;
+}
+
 .slide {
   background-color: $primary;
   border-radius: $global-radius;
   color: white;
-  padding: 38px 64px;
-  height: 100%;
+  padding: 32px 24px;
+  width: 100%; height: 100%;
+
+  @include breakpoint($small) {
+    padding: 38px 64px;
+  }
   
   &__index {
     color: $blue;
