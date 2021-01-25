@@ -1,8 +1,9 @@
 @import "abstracts";
 
 body {
-  font-family: $body-font;
   color: $body-color;
+  font-family: $body-font;
+  font-size: $body-font-size;
 }
 
 h1, h2, h3, h4, h5, h6 {

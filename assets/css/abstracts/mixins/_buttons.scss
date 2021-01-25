@@ -11,8 +11,13 @@
   display: block;
 
   @if($size == 'large') {
-    font-size: $button-font-size-large-desktop;
-    padding: $button-padding-large;
+    font-size: $button-font-size-large-mobile;
+    padding: $button-padding-large-mobile;
+
+    @include breakpoint($small) {
+      font-size: $button-font-size-large-desktop;
+      padding: $button-padding-large-desktop;
+    }
   }
 }
 

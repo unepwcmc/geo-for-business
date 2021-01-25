@@ -1,19 +1,30 @@
 <template>
   <header class="hero">
     <div class="hero__content">
-      <img src="" alt="Logo">
+      <img 
+        alt="GEO for Business Logo"
+        class="logo"
+        src="~/assets/images/logos/geo-for-business.svg" 
+      >
       <h1 class="h1">
         {{ title }}
-        <span class="h1--color">{{ titlecolorchange }}</span>
+        <span class="h1--color">{{ titleColorChange }}</span>
       </h1>
 
       <div class="box-wrapper">
         <div class="box">
-          <h2 class="box__title">The live launch</h2>
-          <p>Lorem</p>
-          <ul>
-            <li>
-              <span>Date</span>
+          <h2 class="box__title">The live launch!</h2>
+          <ul class="box__ul">
+            <li 
+              v-for="(detail, index) in details"
+              :key="`detail-${index}`"
+              class="box__li"
+            >
+              <i :class="['box__icon', `icon--${detail.icon}`]" />
+              <p>
+                <span class="box__label">{{ detail.label }}</span>
+                <span>{{ detail.value }}</span>
+              </p>
             </li>
           </ul>
 
@@ -30,8 +41,25 @@
 export default {
   data () {
     return {
+      details: [
+        {
+          icon: 'calendar',
+          label: 'Date',
+          value: '03 Feb 2021'
+        },
+        {
+          icon: 'clock',
+          label: 'Time',
+          value: '5pm (EAT)'
+        },
+        {
+          icon: 'sandtimer',
+          label: 'Duration',
+          value: '1 1/2 hrs'
+        },
+      ],
       title: 'The newly launched GEO for Business Brief 1: ',
-      titlecolorchange: 'Adapt to Survive: Business transformation in a time of uncertainty'
+      titleColorChange: 'Adapt to Survive: Business transformation in a time of uncertainty',
     }
   }
 }
@@ -41,18 +69,29 @@ export default {
 .hero {
   background-image: url('~assets/images/hero.svg');
   background-size: cover;
-  height: 826px;
   
   position: relative;
+
+  @include breakpoint($small) { height: 826px; }
   
   &__content {
     @include container;
-    padding-top: 80px;
+    @include spacer-large-top;
+    @include spacer-small-bottom;
   }
 }
 
+.logo {
+  width: 160px;
+  
+  @include breakpoint($small) { width: 202px; }
+}
+
 .h1 {
-  width: 60%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  
+  @include breakpoint($small) { width: 60%; }
 
   &--color { 
     color: $blue; 
@@ -63,15 +102,39 @@ export default {
 .box {
   background-color: $primary;
   color: white;
-  padding: 72px 40px 40px 40px;
-  width: 416px;
+  padding: 40px 30px 30px 30px;
+  
 
-  position: absolute;
-  top: 0;
-  right: 0;
+  @include breakpoint($small) {
+    padding: 70px 40px 40px 40px;
+    width: 416px;
 
-  &-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 
+  &__icon { 
+    @include icon-basic; 
+    margin-right: 8px;
+
+    transform: translateY(3px);
+  }
+
+  &__label {
+    font-size: 18px;
+    font-weight: bold;
+
+    display: block;
+
+    @include breakpoint($small) { font-size: 20px; }
+  }
+
+  &__li {
+    margin-bottom: 14px;
+
+    display: grid;
+    grid-template-columns: fit-content(25%) 1fr;
   }
 
   &__link {
@@ -81,5 +144,19 @@ export default {
   &__title {
     color: white;
   }
+
+  &__ul {
+    @include ul-unstyled;
+    margin-bottom: 40px;
+
+    @include breakpoint($small) { margin-bottom: 80px; }
+  }
 }
+
+.icon {
+  &--calendar { background-image: url('~assets/images/icons/calendar.svg'); }
+  &--clock { background-image: url('~assets/images/icons/clock.svg'); }
+  &--sandtimer { background-image: url('~assets/images/icons/sandtimer.svg'); }
+}
+
 </style>

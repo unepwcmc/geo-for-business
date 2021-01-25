@@ -29,6 +29,7 @@ export default {
     { path: '~/components/carousel/', prefix: 'carousel' },
     { path: '~/components/content/', prefix: 'content' },
     { path: '~/components/layout/', prefix: 'layout' },
+    { path: '~/components/icon/', prefix: 'icon' },
     { path: '~/components/nav/', prefix: 'nav' },
     { path: '~/components/page/', prefix: 'page' },
   ],

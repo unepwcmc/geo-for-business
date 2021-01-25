@@ -16,10 +16,12 @@ $global-radius: 4px;
 // buttons
 //--------------------------------------------------
 $button-font-size-desktop: 16px;
+$button-font-size-large-mobile: 18px;
 $button-font-size-large-desktop: 20px;
 $button-radius: $global-radius;
 $button-padding: 10px 20px;
-$button-padding-large: 20px 40px;
+$button-padding-large-mobile: 16px 30px;
+$button-padding-large-desktop: 20px 40px;
 
 //--------------------------------------------------
 // colors
@@ -51,6 +53,7 @@ $roboto: 'Roboto', sans-serif;
 
 $body-color: $primary;
 $body-font: $roboto;
+$body-font-size: 16px;
 
 $heading-color: $primary;
 $heading-font: $roboto;
