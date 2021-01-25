@@ -1,0 +1,12 @@
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-size: map-get($header-styles, 'mobile', 'h#{$i}', 'fs');
+
+    @include breakpoint($small) {
+      font-size: map-get($header-styles, 'tablet', 'h#{$i}', 'fs');
+    }
+    @include breakpoint($medium) {
+      font-size: map-get($header-styles, 'desktop', 'h#{$i}', 'fs');
+    }
+  }
+}

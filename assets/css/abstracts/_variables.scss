@@ -55,17 +55,32 @@ $body-font: $roboto;
 $heading-color: $primary;
 $heading-font: $roboto;
 
-$h1-mobile: 30px;
-$h1-tablet: 50px;
-$h1-desktop: 50px;
-
-$h2-mobile: 25px;
-$h2-tablet: 35px;
-$h2-desktop: 35px;
-
-$h3-mobile: 20px;
-$h3-tablet: 25px;
-$h3-desktop: 25px;
+$header-styles: (
+  'mobile': (
+    'h1': ('fs': 30px, 'mt': 0),
+    'h2': ('fs': 24px, 'mt': 0),
+    'h3': ('fs': 20px, 'mt': 0),
+    'h4': ('fs': 18, 'mt': 0),
+    'h5': ('fs': 17, 'mt': 0),
+    'h6': ('fs': 16, 'mt': 0)
+  ),
+  'tablet': (
+    'h1': ('fs': 50px, 'mt': 0),
+    'h2': ('fs': 35px, 'mt': 0),
+    'h3': ('fs': 25px, 'mt': 0),
+    'h4': ('fs': 25, 'mt': 0),
+    'h5': ('fs': 20, 'mt': 0),
+    'h6': ('fs': 16, 'mt': 0)
+  ),
+  'desktop': (
+    'h1': ('fs': 50px, 'mt': 0),
+    'h2': ('fs': 35px, 'mt': 0),
+    'h3': ('fs': 25px, 'mt': 0),
+    'h4': ('fs': 25, 'mt': 0),
+    'h5': ('fs': 20, 'mt': 0),
+    'h6': ('fs': 16, 'mt': 0)
+  ),
+);
 
 //--------------------------------------------------
 // links
@@ -84,10 +99,10 @@ $spacer-small-mobile: 16px;
 $spacer-small-tablet: 24px;
 $spacer-small-desktop: 36px;
 
-$spacer-medium-mobile: 24px;
-$spacer-medium-tablet: 34px;
+$spacer-medium-mobile: 40px;
+$spacer-medium-tablet: 60px;
 $spacer-medium-desktop: 80px;
 
 $spacer-large-mobile: 30px;
-$spacer-large-tablet: 60px;
+$spacer-large-tablet: 80px;
 $spacer-large-desktop: 100px;

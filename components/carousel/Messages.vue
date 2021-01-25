@@ -98,7 +98,6 @@ export default {
 
   &__title {
     color: white;
-    font-size: $h2-desktop;
     margin-bottom: 24px;
   }
 }

@@ -4,7 +4,13 @@
     class="section"
   >
     <div class="section__content">
-      <div>
+      <img 
+        class="image"
+        src="~/assets/images/content/about.svg"  
+        alt=""
+      >
+
+      <div class="info">
         <h2>{{ title }}</h2>
         <p class="text">{{ text }}</p>
         <a 
@@ -13,7 +19,6 @@
           title="link.title"
         >{{ link.text }}</a>
       </div>
-      <img src="~/assets/images/content/about.svg"  alt="">
     </div>
   </section>
 </template>
@@ -48,12 +53,42 @@ export default {
   }
 }
 
+.image {
+  width: 60%;
+
+  grid-column: start / end;
+  justify-self: center;
+
+  @include breakpoint($small) {
+    width: 80%;
+
+    grid-column: 2 / end;
+    justify-self: end;
+  }
+}
+
+.info {
+  margin-top: 40px;
+
+  grid-column: start / end;
+
+  @include breakpoint($small) {
+    margin-top: 0;
+
+    align-self: center;
+    grid-column: 1 / 2;
+    order: -1;
+  }
+}
+
 .link {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .text {
-  font-size: 20px;
-}
+  font-size: 18px;
+  margin-bottom: 20px;
 
+  @include breakpoint($small) { font-size: 20px; }
+}
 </style>
