@@ -24,6 +24,7 @@
               class="footer__link-external"
               :href="link.url" 
               :title="`Visit: ${link.title}`"
+              target="_blank"
             >
               {{ link.title }}
             </a>
@@ -40,20 +41,20 @@ export default {
     return {
       links: [
         {
-          title: 'GEO for Business',
-          url: ''
+          title: "GEO for Business",
+          url: "https://www.unenvironment.org/global-environment-outlook/geo-business"
         },
         {
-          title: 'UN Environment Programme’s Strategy for Private Sector Engagement',
-          url: ''
+          title: "UN Environment Programme’s Strategy for Private Sector Engagement",
+          url: "https://bit.ly/2NMsJY9"
         },
         {
-          title: 'Global Environment Outlook – GEO-6: Healthy Planet, Healthy People',
-          url: ''
+          title: "Global Environment Outlook – GEO-6: Healthy Planet, Healthy People",
+          url: "https://wedocs.unep.org/bitstream/handle/20.500.11822/27539/GEO6_2019.pdf?sequence=1&isAllowed=y"
         },
         {
-          title: 'Global Environment Outlook –GEO-6: Summary for Policymakers',
-          url: ''
+          title: "Global Environment Outlook –GEO-6: Summary for Policymakers",
+          url: "https://wedocs.unep.org/ bitstream/handle/20.500.11822/27652/GEO6SPM_EN.pdf?sequence=1&isAllowed=y"
         }
 
       ]
