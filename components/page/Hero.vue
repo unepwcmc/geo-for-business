@@ -1,36 +1,38 @@
 <template>
   <header class="hero">
-    <div class="hero__content">
-      <img 
-        alt="GEO for Business Logo"
-        class="logo"
-        src="~/assets/images/logos/geo-for-business.svg" 
-      >
-      <h1 class="h1">
-        {{ title }}
-        <span class="h1--color">{{ titleColorChange }}</span>
-      </h1>
+    <div class="hero__container">
+      <div class="hero__content">
+        <img 
+          alt="GEO for Business Logo"
+          class="logo"
+          src="~/assets/images/logos/geo-for-business.svg" 
+        >
+        <h1 class="h1">
+          {{ title }}
+          <span class="h1--color">{{ titleColorChange }}</span>
+        </h1>
 
-      <div class="box-wrapper">
-        <div class="box">
-          <h2 class="box__title">The live launch!</h2>
-          <ul class="box__ul">
-            <li 
-              v-for="(detail, index) in details"
-              :key="`detail-${index}`"
-              class="box__li"
-            >
-              <i :class="['box__icon', `icon--${detail.icon}`]" />
-              <p>
-                <span class="box__label">{{ detail.label }}</span>
-                <span>{{ detail.value }}</span>
-              </p>
-            </li>
-          </ul>
+        <div class="box-wrapper">
+          <div class="box">
+            <h2 class="box__title">The live launch!</h2>
+            <ul class="box__ul">
+              <li 
+                v-for="(detail, index) in details"
+                :key="`detail-${index}`"
+                class="box__li"
+              >
+                <i :class="['box__icon', `icon--${detail.icon}`]" />
+                <p>
+                  <span class="box__label">{{ detail.label }}</span>
+                  <span>{{ detail.value }}</span>
+                </p>
+              </li>
+            </ul>
 
-          <a
-            class="box__link" 
-            href="" >Link to live launch</a>
+            <a
+              class="box__link" 
+              href="" >Link to live launch</a>
+          </div>
         </div>
       </div>
     </div>
@@ -70,14 +72,14 @@ export default {
   background-image: url('~assets/images/hero.svg');
   background-size: cover;
   
-  position: relative;
-
   @include breakpoint($small) { height: 826px; }
+
+  &__container { @include container; }
   
   &__content {
-    @include container;
     @include spacer-large-top;
     @include spacer-small-bottom;
+    position: relative;
   }
 }
 

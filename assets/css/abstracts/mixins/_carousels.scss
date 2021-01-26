@@ -1,7 +1,11 @@
 @mixin flickity-buttons {
   background-color: $primary;
   top: 0;
-  transform: translateY(-150%);
+  transform: translateY(-120%);
+
+  @include breakpoint($small) {
+    transform: translateY(-150%);
+  }
 
   &:hover { background-color: lighten($primary, 10%);}
 
@@ -12,7 +16,11 @@
   &.previous {
     right: 0;
     left: unset;
-    transform: translate(-110%, -150%);
+    transform: translate(-110%, -120%);
+
+    @include breakpoint($small) {
+      transform: translate(-110%, -150%);
+    }
   }
 
   .flickity-button-icon { 
