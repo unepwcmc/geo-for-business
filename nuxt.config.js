@@ -28,6 +28,7 @@ export default {
     { path: '~/components/cards/', prefix: 'cards' },
     { path: '~/components/carousel/', prefix: 'carousel' },
     { path: '~/components/content/', prefix: 'content' },
+    { path: '~/components/logo/', prefix: 'logo' },
     { path: '~/components/layout/', prefix: 'layout' },
     { path: '~/components/icon/', prefix: 'icon' },
     { path: '~/components/nav/', prefix: 'nav' },

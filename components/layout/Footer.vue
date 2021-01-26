@@ -11,12 +11,8 @@
         >
           unep-science-geoforbusiness@un.org
         </a>
-        <img 
-          class="footer__logo"
-          src="https://s3.amazonaws.com/wcmc.logo/UN-Environment-+logo+2017.svg" />
-        <img 
-          class="footer__logo"
-          src="https://s3.amazonaws.com/wcmc.logo/UNEP_WCMC_logo.svg" />
+        <LogoUnep class="footer__logo" />
+        <LogoUnepWcmc class="footer__logo" />
       </div>
       <div class="footer__links">
         <h2>Important Links</h2>
@@ -90,9 +86,6 @@ export default {
 
   &__logo {
     margin: 24px 0;
-    height: 50px;
-
-    display: block;
   }
 
   &__text {

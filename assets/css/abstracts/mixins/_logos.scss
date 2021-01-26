@@ -1,0 +1,9 @@
+@mixin logo-basic-un {
+  height: 30px;
+
+  display: block;
+
+  @include breakpoint($small) {
+    height: 50px;
+  }
+}

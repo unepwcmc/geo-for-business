@@ -71,9 +71,10 @@ export default {
   cursor: pointer;
   font-weight: bold;
   padding: 10px 0;
-  margin: 0 14px; 
 
   @include breakpoint($medium) {
+    margin: 0 14px;
+    
     display: inline;
   }
 }

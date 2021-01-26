@@ -5,6 +5,14 @@
       <button id="close-nav-pane" class="nav__close" v-show="isBurgerNav" @click="closeNavPane"></button>
 
       <NavScrollTo />
+
+      <a
+        class="download-report"
+        href=""
+        title=""
+      >
+        Download Brief
+      </a>
     </div>
 
     <button :id="mixinTriggerId" class="nav__burger" v-show="isBurgerNav" @click="openNavPane"></button>
@@ -13,15 +21,10 @@
 
 <script>
 import mixinResponsive from "~/mixins/mixin-responsive"
-// import mixinPopupCloseListeners from "../../mixins/mixin-popup-close-listeners"
-// import mixinFocusCapture from "../../mixins/mixin-focus-capture"
-// import { disableTabbing, reenableTabbing } from '../../helpers/focus-helpers';
 
 export default {
   mixins: [
-    mixinResponsive, 
-    // mixinPopupCloseListeners({closeCallback: 'closeNavPane', toggleVariable: 'isNavPaneActive'}), 
-    // mixinFocusCapture({toggleVariable: 'isNavPaneActive', closeCallback: 'closeNavPane', openCallback: 'openNavPane'})
+    mixinResponsive
   ],
 
   data () {
@@ -31,10 +34,6 @@ export default {
       mixinModalId: 'nav-pane',
       mixinTriggerId: 'open-nav-pane'
     }
-  },
-
-  mounted () {
-    // this.areNavPaneItemsVisible ? reenableTabbing(this.navPaneItemContainer) : disableTabbing(this.navPaneItemContainer)
   },
 
   methods: {
@@ -89,25 +88,69 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.nav__pane {
-  background-color: white;
-  width: 100%; height: 100%;
-
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
+.download-report {
+  @include button-accent;
+  margin-top: 20px;
+  
+  display: inline-block;
 
   @include breakpoint($medium) {
-    width: auto; height: auto;
+    order: -1;
+    margin-top: 0;
+    margin-right: 20px;
+  }
+}
+
+.nav {
+  &__burger {
+    @include button-plain;
+    background-image: url('~assets/images/icons/burger.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 35px; height: 22px;
     
     display: block;
-    position: static;
+
+    @include breakpoint($medium) { display: none; }
   }
 
-  &.active { 
+  &__close {
+    @include button-plain;
+    background-image: url('~assets/images/icons/cross.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: 20px;
+    margin-left: auto;
+    width: 24px; height: 24px;
+    
     display: block;
+
+    @include breakpoint($medium) { display: none; }
+  }
+
+  &__pane {
+    background-color: white;
+    padding: 24px 30px;
+    width: 100vw; height: 100%;
+
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    @include breakpoint($medium) {
+      padding: 0;
+      width: auto; height: auto;
+      
+      align-items: center;
+      display: flex;
+      position: initial;
+    }
+
+    &.active { 
+      @include breakpoint-down($medium) { display: block; }
+    }
   }
 }
 </style>
