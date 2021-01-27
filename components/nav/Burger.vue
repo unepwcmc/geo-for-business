@@ -7,9 +7,9 @@
       <NavScrollTo />
 
       <a
-        class="download-report"
+        class="download-brief"
         href=""
-        title=""
+        title="Download Brief"
       >
         Download Brief
       </a>
@@ -88,7 +88,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.download-report {
+.download-brief {
   @include button-accent;
   margin-top: 20px;
   

@@ -22,12 +22,13 @@
             v-if="slide.reportUrl"
             class="slide__button"
             :href="slide.reportUrl"
+            title="Download Report"
           >
             Download Report
           </a>
           <img 
             v-if="slide.image"
-            alt=""
+            alt="Generic image"
             class="slide__image"
             :src="require(`~/assets/images/content/${slide.image}.svg`)" 
           >
@@ -50,8 +51,7 @@ export default {
       title: 'GEO for Business Briefs: Agenda for 2021',
       carouselOptions: {
         cellAlign: 'left',
-        pageDots: false,
-        // setGallerySize: true
+        pageDots: false
       },
       carouselSlides: [
         {

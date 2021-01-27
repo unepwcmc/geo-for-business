@@ -1,16 +1,18 @@
 <template>
   <div class="topbar">
     <a 
-      href=""
-      title=""
+      href="https://www.unep.org/"
+      target="_blank"
+      title="Visit: UNEP"
     >
       <LogoUnep />
     </a>
 
     <a 
       class="link"
-      href=""
-      title=""
+      href="https://www.unenvironment.org/global-environment-outlook/geo-business"
+      target="_blank"
+      title="Visit: Geo for Business"
     >
       Geo for Business
     </a>

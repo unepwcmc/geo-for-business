@@ -7,7 +7,7 @@
       <img 
         class="image"
         src="~/assets/images/content/about.svg"  
-        alt=""
+        alt="Generic image"
       >
 
       <div class="info">

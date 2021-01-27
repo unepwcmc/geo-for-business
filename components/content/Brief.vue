@@ -1,7 +1,7 @@
 <template>
   <section class="section">
     <img 
-      alt=""
+      alt="Front cover of the Brief"
       class="image"
       src="~/assets/images/content/brief-1.png"
     >
