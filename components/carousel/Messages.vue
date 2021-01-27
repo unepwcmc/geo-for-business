@@ -48,7 +48,7 @@ export default {
             "Emerging zoonotic diseases like COVID-19 show the vulnerabilities of these systems and the need for strengthened global resilience and reduced inequalities including gender inequality"
           ],
           "text": "Business leaders know that economic activity depends on healthy people, resilient and equal societies, productive ecosystems and a stable climate, but business and society today face mounting challenges, including:",
-          "title": "The scale of global environmental challenges is unprecedented"
+          "title": "The Scale of Global Environmental Challenges Is Unprecedented"
         },
         {
           "list": [
@@ -58,7 +58,7 @@ export default {
             "To support gender equality in the circular economy and environmental governance, so as to fulfill by 2030 the goal of achieving full and productive employment and decent work for all women and men, including for young people and persons with disabilities."
           ],
           "text": "Because of the scale of the challenge, time is of the essence and business is fundamental to the solution. But business planning needs to align with a nature positive and gender equality mission that uses only renewable energy, restores biodiversity, aims for gender equal employment practices and moves towards a fully circular economy. Given the environmental challenges we face, these are the expected transformations that will need to happen in the next 30 years:",
-          "title": "Business transformation is critical and possible"  
+          "title": "Business Transformation Is Critical and Possible"  
         },
         {
           "list": [
@@ -68,7 +68,7 @@ export default {
             "Coherence of business targets and goals: Targets and goals must be aligned to the ambitious environmental goals we need to achieve, and they must be based on scientific evidence and indicators."
           ],
           "text": "Nature Positive Economic business models that are transformative and regenerative while remaining profitable will require:",
-          "title": "The changing role of business in transforming food systems:"
+          "title": "The Changing Role of Business in Transforming Food Systems:"
         }
       ]
     }

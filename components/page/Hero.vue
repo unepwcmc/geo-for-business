@@ -14,7 +14,7 @@
 
         <div class="box-wrapper">
           <div class="box">
-            <h2 class="box__title">The live launch!</h2>
+            <h2 class="box__title">The Live Launch!</h2>
             <ul class="box__ul">
               <li 
                 v-for="(detail, index) in details"
@@ -31,7 +31,7 @@
 
             <a
               class="box__link" 
-              href="" >Link to live launch</a>
+              href="" >Link to Live Launch</a>
           </div>
         </div>
       </div>
@@ -60,8 +60,8 @@ export default {
           value: '1 1/2 hrs'
         },
       ],
-      title: 'The newly launched GEO for Business Brief 1: ',
-      titleColorChange: 'Adapt to Survive: Business transformation in a time of uncertainty',
+      title: 'The Newly Launched Geo for Business Brief 1:',
+      titleColorChange: 'Adapt to Survive: Business Transformation in a Time of Uncertainty',
     }
   }
 }
