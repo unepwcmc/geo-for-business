@@ -5,7 +5,7 @@ set :repo_url, 'git@github.com:unepwcmc/geo-for-business.git'
 set :nvm_type, :user # or :system, depends on your nvm setup
 set :nvm_node, 'v10.15.1'
 set :nvm_map_bins, %w{node npm yarn}
-
+set :yarn_flags, '--silent --no-progress'
 
 
 # Default branch is :master
