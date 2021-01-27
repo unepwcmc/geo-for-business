@@ -7,39 +7,41 @@
       <h2>{{ title }}</h2>
       <p class="section__info">{{ info }}</p>
 
-      <flickity
-        class="carousel"
-        :options="carouselOptions"
-      >
-        <div v-for="(slide, index) in carouselSlides"
-          :key="index"
-          class="carousel-cell slide" 
+      <client-only>
+        <flickity
+          class="carousel"
+          :options="carouselOptions"
         >
-          <span class="slide__index">{{ index + 1 }}</span>
-          <h3 class="slide__title">{{ slide.title }}</h3>
-          <p class="slide__text" v-html="slide.text" />
-          <a
-            v-if="slide.reportUrl"
-            class="slide__button"
-            :href="slide.reportUrl"
-            title="Download Report"
+          <div v-for="(slide, index) in carouselSlides"
+            :key="index"
+            class="carousel-cell slide" 
           >
-            Download Report
-          </a>
-          <img 
-            v-if="slide.image"
-            alt="Generic image"
-            class="slide__image"
-            :src="require(`~/assets/images/content/${slide.image}.svg`)" 
-          >
-          <span 
-            v-if="!slide.reportUrl"
-            class="slide__banner"
-          >
-            Coming Soon
-          </span>
-        </div>
-      </flickity>
+            <span class="slide__index">{{ index + 1 }}</span>
+            <h3 class="slide__title">{{ slide.title }}</h3>
+            <p class="slide__text" v-html="slide.text" />
+            <a
+              v-if="slide.reportUrl"
+              class="slide__button"
+              :href="slide.reportUrl"
+              title="Download Report"
+            >
+              Download Report
+            </a>
+            <img 
+              v-if="slide.image"
+              alt="Generic image"
+              class="slide__image"
+              :src="require(`~/assets/images/content/${slide.image}.svg`)" 
+            >
+            <span 
+              v-if="!slide.reportUrl"
+              class="slide__banner"
+            >
+              Coming Soon
+            </span>
+          </div>
+        </flickity>
+      </client-only>
     </div>
   </section>
 </template>
