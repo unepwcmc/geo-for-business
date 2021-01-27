@@ -2,18 +2,18 @@
   <section class="section">
     <div class="section__content">
       <h2>{{ title }}</h2>
-      {{ test }}
+      
       <Flickity
         class="carousel"
         :options="carouselOptions"
       >
         <div v-for="(slide, index) in carouselSlides"
           :key="index"
-          class="carousel-cell" 
+          class="carousel-cell slide" 
         >
-          <div class="slide">
-            <span class="slide__index">{{ index + 1 }} of {{ totalSlides }}</span>
-            <h3 class="slide__title">{{ slide.title }}</h3>
+          <span class="slide__index">{{ index + 1 }} of {{ totalSlides }}</span>
+          <h3 class="slide__title">{{ slide.title }}</h3>
+          <div class="slide__columns">
             <span class="slide__text">{{ slide.text }}</span>
             <ul class="slide__ul">
               <li v-for="(listItem, index) in slide.list"
@@ -74,6 +74,11 @@ export default {
     }
   },
 
+  created () {
+    
+    
+  },
+
   computed: {
     totalSlides () {
       return this.carouselSlides.length
@@ -98,22 +103,20 @@ export default {
 }
 
 .carousel-cell {
-  margin-right: 10px;
-  width: 100%; 
-  // height: 100%;
-}
-
-.slide {
+  @include flickity-full-height-cells;
   background-color: $primary;
   border-radius: $global-radius;
   color: white;
+  margin-right: 10px;
   padding: 32px 24px;
-  width: 100%; height: 100%;
+  width: 100%;
 
   @include breakpoint($small) {
     padding: 38px 64px;
   }
-  
+}
+
+.slide {
   &__index {
     color: $blue;
     font-size: 35px;
@@ -124,6 +127,10 @@ export default {
   &__title {
     color: white;
     margin-bottom: 24px;
+  }
+
+  &__columns {
+    columns: 2;
   }
 
   &__ul {

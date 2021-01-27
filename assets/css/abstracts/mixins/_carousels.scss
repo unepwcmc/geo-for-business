@@ -1,3 +1,11 @@
+@mixin flickity-full-height-cells {
+  min-height: 100%;
+
+  align-items: stretch;
+  display: flex; 
+  flex-direction: column;
+}
+
 @mixin flickity-buttons {
   background-color: $primary;
   top: 0;

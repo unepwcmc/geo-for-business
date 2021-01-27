@@ -13,32 +13,30 @@
       >
         <div v-for="(slide, index) in carouselSlides"
           :key="index"
-          class="carousel-cell" 
+          class="carousel-cell slide" 
         >
-          <div class="slide">
-            <span class="slide__index">{{ index + 1 }}</span>
-            <h3 class="slide__title">{{ slide.title }}</h3>
-            <p class="slide__text" v-html="slide.text" />
-            <a
-              v-if="slide.reportUrl"
-              class="slide__button"
-              :href="slide.reportUrl"
-            >
-              Download Report
-            </a>
-            <img 
-              v-if="slide.image"
-              alt=""
-              class="slide__image"
-              :src="require(`~/assets/images/content/${slide.image}.svg`)" 
-            >
-            <span 
-              v-if="!slide.reportUrl"
-              class="slide__banner"
-            >
-              Coming Soon
-            </span>
-          </div>
+          <span class="slide__index">{{ index + 1 }}</span>
+          <h3 class="slide__title">{{ slide.title }}</h3>
+          <p class="slide__text" v-html="slide.text" />
+          <a
+            v-if="slide.reportUrl"
+            class="slide__button"
+            :href="slide.reportUrl"
+          >
+            Download Report
+          </a>
+          <img 
+            v-if="slide.image"
+            alt=""
+            class="slide__image"
+            :src="require(`~/assets/images/content/${slide.image}.svg`)" 
+          >
+          <span 
+            v-if="!slide.reportUrl"
+            class="slide__banner"
+          >
+            Coming Soon
+          </span>
         </div>
       </flickity>
     </div>
@@ -52,7 +50,8 @@ export default {
       title: 'GEO for Business Briefs: Agenda for 2021',
       carouselOptions: {
         cellAlign: 'left',
-        pageDots: false
+        pageDots: false,
+        // setGallerySize: true
       },
       carouselSlides: [
         {
@@ -95,6 +94,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@mixin slide-design-detail {
+  border-top-left-radius: $global-radius;
+  border-bottom-right-radius: $global-radius;
+  color: white;
+  font-weight: bold;
+}
+
 .section {
   @include spacer-medium-top;
   @include spacer-medium-bottom;
@@ -117,29 +123,33 @@ export default {
   margin-top: 60px;
 
   &-cell {
-    width: 100%; 
-    
+    @include flickity-full-height-cells;
+    border: solid 2px $orange;
+    border-radius: $global-radius;
+    margin-right: 20px;
+    padding: 20px;
+    width: calc(100% - 20px);
+
     @include breakpoint($small) {
-      width: 50%;
+      width: calc(50% - 10px); 
     }
 
     @include breakpoint($medium) {
-      width: 33%;
+      width: calc(100%/3 - 20px); 
     }
 
-
     &:nth-child(3n+1){ 
-      .slide { border-color: $orange; }
+      border-color: $orange;
       .slide__banner,
       .slide__index { background-color: $orange; }
     }
     &:nth-child(3n+2){ 
-      .slide { border-color: $purple; }
+      border-color: $purple;
       .slide__banner,
       .slide__index { background-color: $purple; }
     }
     &:nth-child(3n+3){ 
-      .slide { border-color: $blue; }
+      border-color: $blue;
       .slide__banner,
       .slide__index { background-color: $blue; }
     }
@@ -147,18 +157,9 @@ export default {
 }
 
 .slide {
-  border: solid 2px $orange;
-  border-radius: $global-radius;
-  margin: 0 10px;
-  padding: 20px;
-  height: 100%;
-  
   &__index {
-    border-top-left-radius: $global-radius;
-    border-bottom-right-radius: $global-radius;
-    color: white;
+    @include slide-design-detail;
     font-size: 30px;
-    font-weight: bold;
     margin-bottom: 20px;
     width: 60px; height: 60px;
 
@@ -200,11 +201,9 @@ export default {
   }
 
   &__banner {
-    border-top-left-radius: $global-radius;
-    border-bottom-right-radius: $global-radius;
-    color: white;
+    @include slide-design-detail;
     font-size: 18px;
-    font-weight: bold;
+    margin-top: auto;
     margin-left: auto;
     padding: 10px 20px;
     width: fit-content;
