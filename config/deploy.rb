@@ -5,7 +5,7 @@ set :repo_url, 'git@github.com:unepwcmc/geo-for-business.git'
 set :nvm_type, :user # or :system, depends on your nvm setup
 set :nvm_node, 'v10.15.1'
 set :nvm_map_bins, %w{node npm yarn}
-
+set :yarn_flags, '--silent --no-progress'
 
 
 # Default branch is :master
@@ -58,7 +58,7 @@ set :pty, true
 set :linked_files, %w{config/database.yml .env} 
 
 # Default value for linked_dirs is []
-set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'node_modules', 'client/node_modules')
+set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
 
 
 # Default value for default_env is {}
