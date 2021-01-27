@@ -3,29 +3,31 @@
     <div class="section__content">
       <h2>{{ title }}</h2>
       
-      <Flickity
-        class="carousel"
-        :options="carouselOptions"
-      >
-        <div v-for="(slide, index) in carouselSlides"
-          :key="index"
-          class="carousel-cell slide" 
+      <client-only>
+        <Flickity
+          class="carousel"
+          :options="carouselOptions"
         >
-          <span class="slide__index">{{ index + 1 }} of {{ totalSlides }}</span>
-          <h3 class="slide__title">{{ slide.title }}</h3>
-          <div class="slide__columns">
-            <span class="slide__text">{{ slide.text }}</span>
-            <ul class="slide__ul">
-              <li v-for="(listItem, index) in slide.list"
-                :key="`list-${index}`"
-                class="slide__li"
-              >
-                {{ listItem }}
-              </li>
-            </ul>
+          <div v-for="(slide, index) in carouselSlides"
+            :key="index"
+            class="carousel-cell slide" 
+          >
+            <span class="slide__index">{{ index + 1 }} of {{ totalSlides }}</span>
+            <h3 class="slide__title">{{ slide.title }}</h3>
+            <div class="slide__columns">
+              <span class="slide__text">{{ slide.text }}</span>
+              <ul class="slide__ul">
+                <li v-for="(listItem, index) in slide.list"
+                  :key="`list-${index}`"
+                  class="slide__li"
+                >
+                  {{ listItem }}
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </Flickity>
+        </Flickity>
+      </client-only>
     </div>
   </section>
 </template>
