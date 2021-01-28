@@ -17,9 +17,19 @@
       Geo for Business
     </a>
 
-    <NavBurger />
+    <NavBurger :brief-url="briefUrl" />
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    briefUrl: {
+      type: String
+    }
+  },
+}
+</script>
 
 <style lang="scss" scoped>
 .topbar {

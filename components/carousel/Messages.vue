@@ -127,11 +127,15 @@ export default {
   }
 
   &__columns {
-    columns: 2;
+    @include breakpoint($small) { 
+      column-count: 2; 
+      column-gap: 40px; 
+    }
   }
 
   &__ul {
     margin-top: 20px;
+    padding-left: 18px;
   }
   
   &__li {

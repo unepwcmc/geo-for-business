@@ -6,13 +6,7 @@
 
       <NavScrollTo />
 
-      <a
-        class="download-brief"
-        href=""
-        title="Download Brief"
-      >
-        Download Brief
-      </a>
+      <ButtonDownloadReport class="download" :url="briefUrl" />
     </div>
 
     <button :id="mixinTriggerId" class="nav__burger" v-show="isBurgerNav" @click="openNavPane"></button>
@@ -26,6 +20,12 @@ export default {
   mixins: [
     mixinResponsive
   ],
+
+  props: {
+    briefUrl: {
+      type: String
+    }
+  },
 
   data () {
     return {
@@ -43,15 +43,6 @@ export default {
     
     closeNavPane () {
       this.isNavPaneActiveData = false
-    },
-
-    clickNavLink (id) {
-      this.closeNavPane()
-      this.scroll(id)
-    },
-
-    hasChildren (link) {
-      return link.hasOwnProperty('children')
     }
   },
 
@@ -66,30 +57,15 @@ export default {
       }
     },
 
-    navPaneItemContainer () {
-      return this.$el.querySelector('.v-nav-pane-target')
-    },
-
     isNavPaneActive () {
       return this.isNavPaneActiveData && this.isBurgerNav
-    },
-
-    areNavPaneItemsVisible () {
-      return !this.isBurgerNav || this.isNavPaneActive
-    }
-  },
-
-  watch: {
-    areNavPaneItemsVisible (visible) {
-      // visible ? reenableTabbing(this.navPaneItemContainer) : disableTabbing(this.navPaneItemContainer)
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.download-brief {
-  @include button-accent;
+.download {
   margin-top: 20px;
   
   display: inline-block;

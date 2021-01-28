@@ -3,32 +3,31 @@
     <img 
       alt="Front cover of the Brief"
       class="image"
-      src="~/assets/images/content/brief-1.png"
+      src="~/assets/images/content/brief.svg"
     >
     <div class="content">
       <h2 class="h2">
         <span class="h2--color">{{ titleColorChange }}</span>
         {{ title }}
       </h2>
-      <p class="subtitle">{{ subtitle }}</p>
-      <a 
-        class="link"
-        :href="link.url"
-        title="link.title"
-      >{{ link.text }}</a>
+      <p class="subtitle">
+        {{ subtitle }}
+      </p>
+      <ButtonDownloadReport class="download" :url="briefUrl" />
     </div>
   </section>
 </template>
 
 <script> 
 export default {
+  props: {
+    briefUrl: {
+      type: String
+    }
+  },
+
   data () {
     return {
-      link: {
-        text: 'Download Report',
-        title: '',
-        url: ''
-      },
       title: ' Adapt to survive',
       titleColorChange: 'Brief 1:',
       subtitle: 'Business Transformation in a Time of Uncertainty',
@@ -54,6 +53,7 @@ export default {
 
 .h2 { 
   font-size: 25px; 
+  margin-bottom: 0;
 
   &--color { color: $blue; }
 }
@@ -67,7 +67,7 @@ export default {
     margin-left: 20px;
 
     align-self: center;
-    grid-column: 3 / 6; 
+    grid-column: 3 / 5; 
   }
 
   @include breakpoint($medium) { grid-column: 3 / span 2; }
@@ -86,11 +86,6 @@ export default {
 
     transform: translateY(20%);
   }
-}
-
-.link {
-  @include button-accent;
-  width: fit-content;
 }
 
 .subtitle {
