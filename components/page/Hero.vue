@@ -89,7 +89,7 @@ export default {
   background-image: url('~assets/images/hero.svg');
   background-size: cover;
   
-  @include breakpoint($small) { height: 826px; }
+  @include breakpoint($medium) { height: 826px; }
 
   &__container { @include container; }
   
@@ -110,7 +110,7 @@ export default {
   margin-top: 20px;
   margin-bottom: 20px;
   
-  @include breakpoint($small) { width: 60%; }
+  @include breakpoint($medium) { width: 60%; }
 
   &--color { 
     color: $blue; 
@@ -126,6 +126,9 @@ export default {
 
   @include breakpoint($small) {
     padding: 70px 40px 40px 40px;
+  }
+
+  @include breakpoint($medium) {
     width: 416px;
 
     position: absolute;
