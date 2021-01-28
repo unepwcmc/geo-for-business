@@ -1,5 +1,12 @@
 @import "abstracts";
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
 body {
   color: $body-color;
   font-family: $body-font;

@@ -16,6 +16,7 @@
         <a 
           class="link"
           :href="link.url"
+          target="_blank"
           title="link.title"
         >{{ link.text }}</a>
       </div>
@@ -29,8 +30,8 @@ export default {
     return {
       link: {
         text: 'GEO for Business Brochure',
-        title: '',
-        url: ''
+        title: 'Download: GEO for Business Brochure',
+        url: 'https://wedocs.unep.org/bitstream/handle/20.500.11822/31311/GEO_Bus_flyer.pdf?sequence=1&isAllowed=y'
       },
       text: 'Welcome to the first edition of the GEO for Business briefs. The United Nations Environment Programme [UNEP] and its global partners are proud to offer this series of stimulating briefs about the environmental challenges and business opportunities that demand transformational change at a global scale. New installments of GEO for Business will appear every few months to provide guidance on a range of issues relevant to the future of business in a changing world.',
       title: 'About GEO for Business'

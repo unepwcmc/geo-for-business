@@ -35,6 +35,7 @@ target: 'static',
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: [
+    { path: '~/components/button/', prefix: 'button' },
     { path: '~/components/cards/', prefix: 'cards' },
     { path: '~/components/carousel/', prefix: 'carousel' },
     { path: '~/components/content/', prefix: 'content' },
