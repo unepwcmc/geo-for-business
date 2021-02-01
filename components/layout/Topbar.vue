@@ -34,6 +34,7 @@ export default {
 <style lang="scss" scoped>
 .topbar {
   @include gutters;
+  background-color: white;
   border-bottom: solid 2px $primary;
   width: 100%; height: 50px;
 
@@ -54,5 +55,4 @@ export default {
     order: 1;
   }
 }
-
 </style>

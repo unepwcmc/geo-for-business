@@ -107,7 +107,7 @@ export default {
   &__pane {
     background-color: white;
     padding: 24px 30px;
-    width: 100vw; height: 100%;
+    width: 100vw; height: 100vh;
 
     display: none;
     position: fixed;

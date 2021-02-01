@@ -1,7 +1,9 @@
 <template>
   <div>
-    <LayoutTopbar :briefUrl="briefs[0].reportUrl" />
-    <PageHero />
+    <StickyBar triggerElement="#gsap-trigger-sticky">
+      <LayoutTopbar :briefUrl="briefs[0].reportUrl" />
+    </StickyBar>
+    <PageHero id="gsap-trigger-sticky" />
     <ContentBrief :briefUrl="briefs[0].reportUrl" />
     <ContentAbout />
     <CarouselBriefs :carousel-slides="briefs" />

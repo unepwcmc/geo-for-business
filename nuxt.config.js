@@ -44,6 +44,7 @@ target: 'static',
     { path: '~/components/icon/', prefix: 'icon' },
     { path: '~/components/nav/', prefix: 'nav' },
     { path: '~/components/page/', prefix: 'page' },
+    { path: '~/components/sticky/', prefix: 'sticky' },
   ],
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
