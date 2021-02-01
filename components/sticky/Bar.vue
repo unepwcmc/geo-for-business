@@ -57,6 +57,8 @@ export default {
       this.$ScrollTrigger.create({
         trigger: this.triggerElement,
         start: "top top", // when the bottom of the trigger hits the top of the viewport
+        endTrigger:"html",
+        end:"bottom top", // end trigger will never be hit
         onUpdate: self => {
           this.isStuck = self.isActive
         }

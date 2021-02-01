@@ -4,7 +4,9 @@
 
       <button id="close-nav-pane" class="nav__close" v-show="isBurgerNav" @click="closeNavPane"></button>
 
-      <NavScrollTo />
+      <NavScrollTo 
+        v-on:click:nav-link="checkCloseNavPane"
+      />
 
       <ButtonDownloadReport class="download" :url="briefUrl" />
     </div>
@@ -36,16 +38,6 @@ export default {
     }
   },
 
-  methods: {
-    openNavPane () {
-      this.isNavPaneActiveData = true
-    },
-    
-    closeNavPane () {
-      this.isNavPaneActiveData = false
-    }
-  },
-
   computed: {
     isBurgerNav () {
       return this.isAlwaysBurger || !this.isLarge()
@@ -59,6 +51,20 @@ export default {
 
     isNavPaneActive () {
       return this.isNavPaneActiveData && this.isBurgerNav
+    }
+  },
+
+  methods: {
+    openNavPane () {
+      this.isNavPaneActiveData = true
+    },
+    
+    closeNavPane () {
+      this.isNavPaneActiveData = false
+    },
+
+    checkCloseNavPane () {
+      if(this.isBurgerNav) { this.closeNavPane() }
     }
   }
 }

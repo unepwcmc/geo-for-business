@@ -52,6 +52,8 @@ export default {
         duration: 1,
         scrollTo: sectionId
       })
+
+      this.$emit('click:nav-link')
     }
   }
 }
