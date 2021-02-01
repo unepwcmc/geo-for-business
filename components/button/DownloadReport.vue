@@ -19,14 +19,14 @@ export default {
 
   data () {
     return {
-      launchDate: '02-03-2021 08:00:00', //MM-DD-YYYY
+      launchDate: 'Feb 03 2021 14:00:00 GMT+0000',
       title: 'Download Report'
     }
   },
 
   computed: {
     isDisabled () {
-      const current = Date.now()
+      const current = new Date(Date.now())
       
       return current < new Date(this.launchDate)
     }

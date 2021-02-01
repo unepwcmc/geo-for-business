@@ -61,15 +61,15 @@ export default {
         {
           icon: 'clock',
           label: 'Time',
-          value: '5pm (EAT)'
+          value: '(2 - 3pm GMT)'
         },
         {
           icon: 'sandtimer',
           label: 'Duration',
-          value: '1 1/2 hrs'
+          value: '1 hr'
         },
       ],
-      title: 'The Newly Launched Geo for Business Brief 1:',
+      title: 'The Newly Launched GEO for Business Brief 1:',
       titleColorChange: 'Adapt to Survive: Business Transformation in a Time of Uncertainty',
     }
   },
