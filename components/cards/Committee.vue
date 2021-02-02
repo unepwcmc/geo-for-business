@@ -44,19 +44,19 @@ export default {
         },
         {
           image: 'li-zhang',
-          jobTitle: 'Board Member & Secretary General Society of Entrepreneurs for Ecology',
+          jobTitle: 'Board Member & Secretary General, Society of Entrepreneurs for Ecology',
           location: 'China',
           name: 'Li (Aster) Zhang'
         },
         {
           image: 'paul-ekins',
-          jobTitle: 'Director, UCL Institute for Sustainable Resources, Professor of Resources and Environmental Policy University College London',
+          jobTitle: 'Director, UCL Institute for Sustainable Resources, Professor of Resources and Environmental Policy, University College London',
           location: 'UK',
           name: 'Paul Ekins (Co-chair)'
         },
         {
           image: 'majda-dabaghi',
-          jobTitle: 'Director, Inclusive and Green GrowthInternational Chamber of Commerce',
+          jobTitle: 'Director, Inclusive and Green Growth International Chamber of Commerce',
           location: 'France',
           name: 'Majda Dabaghi'
         },
@@ -80,7 +80,7 @@ export default {
         },
         {
           image: 'ifeoma-malo',
-          jobTitle: 'Chief Executive Officer Clean Technology Hub',
+          jobTitle: 'Chief Executive Officer, Clean Technology Hub',
           location: 'Nigeria',
           name: 'Ifeoma Malo'
         },
@@ -98,7 +98,7 @@ export default {
         },
         {
           image: 'jorge-caceres',
-          jobTitle: 'Director Ejecutivo Centro de Medioambiente y Energía, Federation of Chilean Industry',
+          jobTitle: 'Director, Ejecutivo Centro de Medioambiente y Energía, Federation of Chilean Industry',
           location: 'Chile',
           name: 'Jorge Càceres'
         },
@@ -110,7 +110,7 @@ export default {
         },
         {
           image: 'liesel-van-ast',
-          jobTitle: 'Membership and Regional Coordination Manager UNEP Finance Initiative',
+          jobTitle: 'Membership and Regional Coordination Manager, UNEP Finance Initiative',
           location: 'Switzerland',
           name: 'Liesel Van Ast'
         },
@@ -122,19 +122,19 @@ export default {
         },
         {
           image: 'james-donovan',
-          jobTitle: 'Chair UNEP Business and Industry Major Group',
+          jobTitle: 'Chair, UNEP Business and Industry Major Group',
           location: 'UK',
           name: 'James Donovan'
         },
         {
           image: 'dominik-kummerle',
-          jobTitle: 'Policy Manager Business at OECD',
+          jobTitle: 'Policy Manager, Business at OECD',
           location: 'France',
           name: 'Dominik Kümmerle'
         },
         {
           image: 'tim-nixon',
-          jobTitle: 'Principal Constellation Research (link to Thomson-Reuters)',
+          jobTitle: 'Principal, Constellation Research (link to Thomson-Reuters)',
           location: 'United States',
           name: 'Tim Nixon'
         },
