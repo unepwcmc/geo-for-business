@@ -134,7 +134,7 @@ export default {
         },
         {
           image: 'tim-nixon',
-          jobTitle: 'Principal, Constellation Research (link to Thomson-Reuters)',
+          jobTitle: 'Principal, Constellation Research Thomson-Reuters',
           location: 'United States',
           name: 'Tim Nixon'
         },
