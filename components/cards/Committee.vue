@@ -62,7 +62,7 @@ export default {
         },
         {
           image: 'richard-welford',
-          jobTitle: 'Chairman CSR Asia',
+          jobTitle: 'Chairman, CSR Asia',
           location: 'Hong Kong',
           name: 'Richard Welford'
         },
