@@ -30,7 +30,7 @@ export default {
     return {
       title: ' Adapt to survive',
       titleColorChange: 'Brief 1:',
-      subtitle: 'Business Transformation in a Time of Uncertainty',
+      subtitle: 'Business transformation in a time of uncertainty',
     }
   }
 }

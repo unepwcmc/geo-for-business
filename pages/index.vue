@@ -21,7 +21,7 @@ export default {
           image: 'building',
           reportUrl: 'https://wedocs.unep.org/bitstream/handle/20.500.11822/32630/G4B.pdf?sequence=1&isAllowed=y',
           text: "An overarching introductory brief which covers the call from <a href'https://www.unenvironment.org/resources/global-environment-outlook-6' title='View the Global Environment Outlook 6' target='_blank'>GEO-6</a> for transformational change – what will businesses need to do in response to the science?",
-          title: 'Adapt to Survive: Business Transformation in a Time of Uncertainty',
+          title: 'Adapt to Survive: Business transformation in a time of uncertainty',
         },
         {
           reportUrl: undefined,

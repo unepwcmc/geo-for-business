@@ -70,7 +70,7 @@ export default {
         },
       ],
       title: 'The Newly Launched GEO for Business Brief 1:',
-      titleColorChange: 'Adapt to Survive: Business Transformation in a Time of Uncertainty',
+      titleColorChange: 'Adapt to Survive: Business transformation in a time of uncertainty',
     }
   },
 

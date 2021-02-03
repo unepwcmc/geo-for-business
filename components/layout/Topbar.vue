@@ -12,9 +12,9 @@
       class="link"
       href="https://www.unenvironment.org/global-environment-outlook/geo-business"
       target="_blank"
-      title="Visit: Geo for Business"
+      title="Visit: GEO for Business"
     >
-      Geo for Business
+      GEO for Business
     </a>
 
     <NavBurger :brief-url="briefUrl" />
