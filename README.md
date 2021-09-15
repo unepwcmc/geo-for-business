@@ -10,10 +10,12 @@ $ yarn install
 $ yarn dev
 
 # build for production and launch server
+# (Does not need to be run to deploy to staging or prod - not 100% sure what it for)
 $ yarn build
 $ yarn start
 
 # generate static project
+# (Does not need to be run to deploy to staging or prod - not 100% sure what it for)
 $ yarn generate
 ```
 
