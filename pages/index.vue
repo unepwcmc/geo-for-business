@@ -30,9 +30,9 @@ export default {
           
         },
         {
-          reportUrl: undefined,
+          reportUrl: 'https://wedocs.unep.org/bitstream/handle/20.500.11822/36755/GEO4B3.pdf',
           text: 'Producing environmentally-sustainable food, in the right place and at the right time to meet poverty and food-related SDGs. This is a sector /system specific brief which addresses food and agriculture and links to the recent analysis in the World Resources Institute ‘food gap’ report.',
-          title: 'The Changing Role of Business in Transforming Food Systems:',
+          title: 'The Role of Business in Transforming Food Systems:',
         },
         {
           reportUrl: undefined,

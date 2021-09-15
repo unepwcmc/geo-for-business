@@ -51,17 +51,17 @@
 export default {
   data () {
     return {
-      dateEventEnd: '02-03-2021 23:59:00', //MM-DD-YYYY
+      dateEventEnd: '09-16-2021 23:59:00', //MM-DD-YYYY
       details: [
         {
           icon: 'calendar',
           label: 'Date',
-          value: '03 Feb 2021'
+          value: '16 Sept 2021'
         },
         {
           icon: 'clock',
           label: 'Time',
-          value: '(2 - 3pm GMT)'
+          value: '(4 - 5pm GMT)'
         },
         {
           icon: 'sandtimer',
@@ -69,8 +69,8 @@ export default {
           value: '1 hr'
         },
       ],
-      title: 'The Newly Launched GEO for Business Brief 1:',
-      titleColorChange: 'Adapt to Survive: Business transformation in a time of uncertainty',
+      title: 'The Newly Launched GEO for Business Brief 3:',
+      titleColorChange: 'The Role of Business in Transforming Food Systems',
     }
   },
 
