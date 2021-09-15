@@ -70,7 +70,7 @@ export default {
             "Coherence of business targets and goals: Targets and goals must be aligned to the ambitious environmental goals we need to achieve, and they must be based on scientific evidence and indicators."
           ],
           "text": "Nature Positive Economic business models that are transformative and regenerative while remaining profitable will require:",
-          "title": "The Changing Role of Business in Transforming Food Systems:"
+          "title": "The Role of Business in Transforming Food Systems:"
         }
       ]
     }
