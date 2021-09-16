@@ -1,3 +1,6 @@
+## v1.0.4
+- Update link to live event for Brief 3 launch event.
+
 ## v1.0.3
 - Update content for Brief 3 launch event.
 
