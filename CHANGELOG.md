@@ -1,3 +1,6 @@
+## v1.0.3
+- Update content for Brief 3 launch event.
+
 ## v1.0.2
 
 - Design amends and addition of Sticky component to make the topbar stick.
