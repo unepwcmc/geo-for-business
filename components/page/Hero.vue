@@ -34,7 +34,7 @@
 
             <a
               class="box__link" 
-              href="https://www.linkedin.com/events/geo-6adapttosurvive-businesstra6758378767342714880/"
+              href="https://www.youtube.com/watch?v=M9eXx0-BM-s"
               target="_blank"
               title="Go to the Live Launch"
             >
