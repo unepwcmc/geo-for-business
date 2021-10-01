@@ -34,7 +34,7 @@
 
             <a
               class="box__link" 
-              href="https://www.youtube.com/watch?v=M9eXx0-BM-s"
+              :href="eventUrl"
               target="_blank"
               title="Go to the Live Launch"
             >
@@ -51,26 +51,27 @@
 export default {
   data () {
     return {
-      dateEventEnd: '09-16-2021 23:59:00', //MM-DD-YYYY
+      dateEventEnd: '10-07-2021 23:59:00', //MM-DD-YYYY
       details: [
         {
           icon: 'calendar',
           label: 'Date',
-          value: '16 Sept 2021'
+          value: '7 Oct 2021'
         },
         {
           icon: 'clock',
           label: 'Time',
-          value: '(4 - 5pm GMT)'
+          value: '13:00 - 14:30 BST'
         },
         {
           icon: 'sandtimer',
           label: 'Duration',
-          value: '1 hr'
+          value: '90 minutes'
         },
       ],
-      title: 'The Newly Launched GEO for Business Brief 3:',
-      titleColorChange: 'The Role of Business in Transforming Food Systems',
+      eventUrl: 'https://www.youtube.com/watch?v=a-hNSkpqoAk',
+      title: 'The Newly Launched GEO for Business Brief 2:',
+      titleColorChange: 'The Role of Business in Moving from Linear to Circular economies',
     }
   },
 

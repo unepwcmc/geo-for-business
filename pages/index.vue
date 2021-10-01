@@ -1,10 +1,10 @@
 <template>
   <div>
     <StickyBar triggerElement="#gsap-trigger-sticky">
-      <LayoutTopbar :briefUrl="briefs[0].reportUrl" />
+      <LayoutTopbar :briefUrl="briefs[1].reportUrl" />
     </StickyBar>
     <PageHero id="gsap-trigger-sticky" />
-    <ContentBrief :briefUrl="briefs[0].reportUrl" />
+    <ContentBrief :briefUrl="briefs[1].reportUrl" />
     <ContentAbout />
     <CarouselBriefs :carousel-slides="briefs" />
     <CarouselMessages />
@@ -24,9 +24,9 @@ export default {
           title: 'Adapt to Survive: Business transformation in a time of uncertainty',
         },
         {
-          reportUrl: undefined,
+          reportUrl: 'https://wedocs.unep.org/bitstream/handle/20.500.11822/36830/RBMLCE.pdf?sequence=1&isAllowed=y',
           text: 'Addressing resource efficiency, waste and supply chains in a cross-cutting brief which explores circular economy as a means to achieve the SDGs, and the implications for business. This report links to the analysis from the Ellen McArthur Foundation.',
-          title: 'Moving from Linear to Circular Economies and What This Means for Business:',
+          title: 'The Role of Business in Moving from Linear to Circular economies',
           
         },
         {
