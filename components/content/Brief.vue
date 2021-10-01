@@ -28,9 +28,9 @@ export default {
 
   data () {
     return {
-      title: ' Adapt to survive',
-      titleColorChange: 'Brief 1:',
-      subtitle: 'Business transformation in a time of uncertainty',
+      title: 'The Role of Business in Moving from Linear to Circular economies',
+      titleColorChange: 'Brief 2:',
+      subtitle: '',
     }
   }
 }
