@@ -36,11 +36,6 @@ export default {
         },
         {
           reportUrl: undefined,
-          text: 'A sector/system specific brief which addresses the transformation of how we produce and consume energy to meet climate challenges. This brief links to the recent analysis in UNEP’s Emissions Gap Report.',
-          title: 'How Business Can Manage the Transformation Towards Deep Decarbonization and Full Electrification:',
-        },
-        {
-          reportUrl: undefined,
           text: 'Sector/system specific brief which addresses climate-proofing current and future infrastructure investments. Focusing on the scope and scale of projected infrastructure investment to 2050, including the questions over how this can be delivered in line with the environmental dimension of the SDGs and a move towards nature-based solutions. This brief links to the on-going work of GEO for Cities.',
           title: 'Future-proofing Infrastructure for Climate Resilience:',
         },
