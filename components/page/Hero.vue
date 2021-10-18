@@ -69,7 +69,7 @@ export default {
           value: '90 minutes'
         },
       ],
-      eventUrl: 'https://www.youtube.com/watch?v=a-hNSkpqoAk',
+      eventUrl: 'https://www.youtube.com/watch?v=_5zQLp_O5QA',
       title: 'The Newly Launched GEO for Business Brief 2:',
       titleColorChange: 'The Role of Business in Moving from Linear to Circular economies',
     }
