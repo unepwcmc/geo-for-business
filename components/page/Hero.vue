@@ -12,10 +12,7 @@
           <span class="h1--color">{{ titleColorChange }}</span>
         </h1>
 
-        <div 
-          v-if="!eventEnded"
-          class="box-wrapper"
-        >
+        <div class="box-wrapper">
           <div class="box">
             <h2 class="box__title">The Live Launch!</h2>
             <ul class="box__ul">
@@ -38,7 +35,7 @@
               target="_blank"
               title="Go to the Live Launch"
             >
-              Link to Live Launch
+              View Launch Recording
             </a>
           </div>
         </div>
@@ -51,7 +48,6 @@
 export default {
   data () {
     return {
-      dateEventEnd: '10-07-2021 23:59:00', //MM-DD-YYYY
       details: [
         {
           icon: 'calendar',
@@ -72,14 +68,6 @@ export default {
       eventUrl: 'https://www.youtube.com/watch?v=_5zQLp_O5QA',
       title: 'The Newly Launched GEO for Business Brief 2:',
       titleColorChange: 'The Role of Business in Moving from Linear to Circular economies',
-    }
-  },
-
-  computed: {
-    eventEnded () {
-      const current = Date.now()
-      
-      return current > new Date(this.dateEventEnd)
     }
   }
 }
