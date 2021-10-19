@@ -1,3 +1,8 @@
+## v1.0.6
+
+- Text amends
+- Removal of timed functionality for "launch box" in the hero
+
 ## v1.0.5
 
 - Update text and images for the launch of Brief 2
