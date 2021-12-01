@@ -1,3 +1,9 @@
+## v1.0.7
+
+- Text amends
+- Removal of numbers of Brief cards
+- Removal of Key messages carousel
+
 ## v1.0.6
 
 - Text amends
