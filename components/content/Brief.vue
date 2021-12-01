@@ -29,7 +29,7 @@ export default {
   data () {
     return {
       title: 'The Role of Business in Moving from Linear to Circular economies',
-      titleColorChange: 'Brief 2:',
+      titleColorChange: '',
       subtitle: '',
     }
   }
