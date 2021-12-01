@@ -7,6 +7,7 @@
     <ContentBrief :briefUrl="briefs[1].reportUrl" />
     <ContentAbout />
     <CarouselBriefs :carousel-slides="briefs" />
+    <CarouselMessages />
     <CardsCommittee />
   </div>
 </template>
