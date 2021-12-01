@@ -16,6 +16,7 @@
             :key="index"
             class="carousel-cell slide" 
           >
+            <span class="slide__index">{{ index + 1 }}</span>
             <h3 class="slide__title">{{ slide.title }}</h3>
             <p class="slide__text" v-html="slide.text" />
             <ButtonDownloadReport 
@@ -57,7 +58,7 @@ export default {
         cellAlign: 'left',
         pageDots: false
       },
-      info: 'The themes to be covered in the GEO for Business briefs are:'
+      info: 'The six themes to be covered in the GEO for Business briefs are:'
     }
   }
 }
@@ -98,7 +99,7 @@ export default {
 
   &-cell {
     @include flickity-full-height-cells;
-    border: solid 5px $orange;
+    border: solid 2px $orange;
     border-radius: $global-radius;
     margin-right: 20px;
     padding: 20px;

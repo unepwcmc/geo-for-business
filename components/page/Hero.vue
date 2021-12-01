@@ -52,22 +52,22 @@ export default {
         {
           icon: 'calendar',
           label: 'Date',
-          value: '7 Dec 2021'
+          value: '7 Oct 2021'
         },
         {
           icon: 'clock',
           label: 'Time',
-          value: '14:00 - 15:00 GMT'
+          value: '13:00 - 14:30 BST'
         },
         {
           icon: 'sandtimer',
           label: 'Duration',
-          value: '60 minutes'
+          value: '90 minutes'
         },
       ],
-      eventUrl: 'https://www.youtube.com/watch?v=8dtTLN7-ItU',
-      title: 'The Newly Launched GEO for Business Brief:',
-      titleColorChange: 'Future proofing infrastructure to address the climate biodiversity and pollution crises',
+      eventUrl: 'https://www.youtube.com/watch?v=_5zQLp_O5QA',
+      title: 'The Newly Launched GEO for Business Brief 2:',
+      titleColorChange: 'The Role of Business in Moving from Linear to Circular economies',
     }
   }
 }
