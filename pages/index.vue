@@ -34,12 +34,12 @@ export default {
           title: 'The Role of Business in Transforming Food Systems:',
         },
         {
-          reportUrl: undefined,
+          reportUrl: 'https://wedocs.unep.org/bitstream/handle/20.500.11822/37563/GFB5.pdf',
           text: 'Sector/system specific brief which addresses climate-proofing current and future infrastructure investments. Focusing on the scope and scale of projected infrastructure investment to 2050, including the questions over how this can be delivered in line with the environmental dimension of the SDGs and a move towards nature-based solutions. This brief links to the on-going work of GEO for Cities.',
           title: 'Future proofing infrastructure to address the climate and biodiversity crises:',
         },
         {
-          reportUrl: undefined,
+          reportUrl: 'https://wedocs.unep.org/bitstream/handle/20.500.11822/37567/GFB6.pdf',
           text: 'The brief will address how financial services can be realigned to play a transformational role in achieving the environmental dimensions of the SDGs and related international agreements. It aims to inform, challenge and enable action on global environmental challenges by the financial sector.',
           title: 'Changing Finance to Catalyze Transformation: How financial institutions can accelerate the transition to an environmentally sustainable economy:',
         }
