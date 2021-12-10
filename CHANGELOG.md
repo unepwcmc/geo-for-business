@@ -1,3 +1,7 @@
+## v1.0.8
+
+- Update links in the brief carousel
+
 ## v1.0.7
 
 - Text amends
